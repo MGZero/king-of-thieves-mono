@@ -127,9 +127,6 @@ namespace WinFormsGraphicsDevice
         GraphicsDevice graphicsDevice;
 
 
-        // Store the current device settings.
-        PresentationParameters parameters;
-
 
         // IGraphicsDeviceService events.
         public event EventHandler<EventArgs> DeviceCreated;

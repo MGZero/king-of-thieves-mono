@@ -37,6 +37,7 @@ namespace King_of_Thieves.Actors
         DAY,
         DUSK,
         FLYING,
+        FROZEN,
         IDLE,
         KNOCKBACK,
         LIFT,
@@ -57,7 +58,7 @@ namespace King_of_Thieves.Actors
 
     public abstract class CActor
     {
-        public IList<ACTOR_STATES> INVINCIBLE_STATES = new List<ACTOR_STATES>{ACTOR_STATES.KNOCKBACK, ACTOR_STATES.SHOCKED}.AsReadOnly();
+        public IList<ACTOR_STATES> INVINCIBLE_STATES = new List<ACTOR_STATES>{ACTOR_STATES.KNOCKBACK, ACTOR_STATES.SHOCKED, ACTOR_STATES.FROZEN}.AsReadOnly();
         protected Vector2 _position = Vector2.Zero;
         protected Vector2 _oldPosition = Vector2.Zero;
         public readonly ACTORTYPES ACTORTYPE;
@@ -116,6 +117,7 @@ namespace King_of_Thieves.Actors
         public virtual void animationEnd(object sender) { }
         public virtual void timer0(object sender)  { }
         public virtual void timer1(object sender) { }
+        public virtual void timer2(object sender) { }
         public virtual void mouseClick(object sender) { }
         public virtual void click(object sender) { }
         public virtual void tap(object sender) { }
@@ -132,6 +134,7 @@ namespace King_of_Thieves.Actors
 
         private int _timer0 = -1;
         private int _timer1 = -1;
+        private int _timer2 = -1;
         
 
         public CActor()
@@ -149,6 +152,7 @@ namespace King_of_Thieves.Actors
             onTap += new tapHandler(tap);
             onTimer0 += new timerHandler(timer0);
             onTimer1 += new timerHandler(timer1);
+            onTimer2 += new timerHandler(timer2);
 
             _name = name;
             _collidables = new List<Type>();
@@ -204,6 +208,11 @@ namespace King_of_Thieves.Actors
         public void startTimer1(int ticks)
         {
             _timer1 = ticks;
+        }
+
+        public void startTimer2(int ticks)
+        {
+            _timer2 = ticks;
         }
 
         //overload this and call the base to process your own parameters
@@ -417,6 +426,17 @@ namespace King_of_Thieves.Actors
                     }
                 }
 
+                if (_timer2 >= 0)
+                {
+                    _timer2--;
+
+                    if (_timer2 <= 0)
+                    {
+                        _timer2 = -1;
+                        onTimer2(this);
+                    }
+                }
+
                 foreach (KeyValuePair<uint, CActor> ID in _userEventsToFire)
                 {
                     _userEvents[ID.Key](ID.Value);
@@ -549,6 +569,11 @@ namespace King_of_Thieves.Actors
         public virtual void shock()
         {
             throw new NotImplementedException("You may not call this method from the CActor class. Method: shock()");
+        }
+
+        public virtual void freeze()
+        {
+            throw new NotImplementedException("You may not call this method from the CActor class. Method: freeze()");
         }
 
         //this will go up to the component and trigger the specified user event in the specified actor

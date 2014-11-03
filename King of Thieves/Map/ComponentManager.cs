@@ -8,8 +8,7 @@ namespace King_of_Thieves.Map
     class ComponentManager : Gears.Playable.UnitManager
     {
 
-        private Actors.CActor[] _actorRegistry;
-        private int _actorsInRegistry = 0;
+        private Actors.CActor[] _actorRegistry = null;
 
         public ComponentManager(ComponentFactory[] factories)
         {

@@ -85,6 +85,11 @@ namespace King_of_Thieves.Actors.Player
             _imageIndex.Add("PlayerShockUp", new Graphics.CSprite("Player:ShockUp", Graphics.CTextures.textures["Player:ShockUp"]));
             _imageIndex.Add("PlayerShockLeft", new Graphics.CSprite("Player:ShockLeft", Graphics.CTextures.textures["Player:ShockLeft"]));
             _imageIndex.Add("PlayerShockRight", new Graphics.CSprite("Player:ShockLeft", Graphics.CTextures.textures["Player:ShockLeft"], null, true));
+
+            _imageIndex.Add("PlayerFreezeDown", new Graphics.CSprite("Player:FreezeDown", Graphics.CTextures.textures["Player:FreezeDown"]));
+            _imageIndex.Add("PlayerFreezeUp", new Graphics.CSprite("Player:FreezeUp", Graphics.CTextures.textures["Player:FreezeUp"]));
+            _imageIndex.Add("PlayerFreezeLeft", new Graphics.CSprite("Player:FreezeLeft", Graphics.CTextures.textures["Player:FreezeLeft"]));
+            _imageIndex.Add("PlayerFreezeRight", new Graphics.CSprite("Player:FreezeLeft", Graphics.CTextures.textures["Player:FreezeLeft"], null, true));
         }
 
         public override void collide(object sender, CActor collider)
@@ -104,21 +109,12 @@ namespace King_of_Thieves.Actors.Player
                 {
                     if (collider is NPC.Enemies.CBaseEnemy)
                     {
-
-                        if (((NPC.Enemies.CBaseEnemy)collider).hasProperty(NPC.Enemies.ENEMY_PROPERTIES.ELECTRIC))
-                        {
-                            //start a shock timer
-                            //change state to shocked
-                        }
-                        else
-                        {
-                            //start a moveback timer
-                            //change state to knockBack
-                            startTimer0(10);
-                            _state = ACTOR_STATES.KNOCKBACK;
-                            _acceptInput = false;
-                            solidCollide(collider, true);
-                        }
+                        //start a moveback timer
+                        //change state to knockBack
+                        startTimer0(10);
+                        _state = ACTOR_STATES.KNOCKBACK;
+                        _acceptInput = false;
+                        solidCollide(collider, true);
                     }
                 }
             }
@@ -536,6 +532,15 @@ namespace King_of_Thieves.Actors.Player
             }
         }
 
+        public override void timer2(object sender)
+        {
+            if (_state == ACTOR_STATES.FROZEN)
+            {
+                dealDamange(2, this);
+                startTimer2(80);
+            }
+        }
+
         public static float glblX
         {
             get
@@ -586,6 +591,32 @@ namespace King_of_Thieves.Actors.Player
 
                 case DIRECTION.RIGHT:
                     swapImage("PlayerShockRight");
+                    break;
+            }
+        }
+
+        public override void freeze()
+        {
+            _state = ACTOR_STATES.FROZEN;
+            _acceptInput = false;
+            startTimer0(240);
+            startTimer2(80);
+            switch (_direction)
+            {
+                case DIRECTION.DOWN:
+                    swapImage("PlayerFreezeDown");
+                    break;
+
+                case DIRECTION.UP:
+                    swapImage("PlayerFreezeUp");
+                    break;
+
+                case DIRECTION.LEFT:
+                    swapImage("PlayerFreezeLeft");
+                    break;
+
+                case DIRECTION.RIGHT:
+                    swapImage("PlayerFreezeRight");
                     break;
             }
         }

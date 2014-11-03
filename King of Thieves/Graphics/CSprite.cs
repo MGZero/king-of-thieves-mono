@@ -9,7 +9,6 @@ namespace King_of_Thieves.Graphics
 { 
     public class CSprite : CRenderable
     {
-        private Texture2D _shaderTex = null; 
         private Rectangle _size;
         protected string _name = "";
         protected Vector2 _position = Vector2.Zero;

@@ -20,12 +20,14 @@ namespace King_of_Thieves.usr.local
         {
             CMasterControl.mapManager.drawMap();
             CMasterControl.healthController.drawMe(spriteBatch);
+            CMasterControl.buttonController.drawMe(spriteBatch);
         }
 
         public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
         {
             CMasterControl.mapManager.updateMap(gameTime);
             CMasterControl.healthController.update(gameTime);
+            CMasterControl.buttonController.update(gameTime);
             clockTest.update(gameTime);
         }
     }

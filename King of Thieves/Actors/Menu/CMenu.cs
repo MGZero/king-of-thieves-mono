@@ -16,7 +16,6 @@ namespace King_of_Thieves.Actors.Menu
         private Sound.CSound _bgm = null;
         private Sound.CSound _itemSwitch = null;
         private Sound.CSound _itemSelect = null;
-        private GameTime _gameTime;
         private TimeSpan _startTime;
         private int _menuIndex = 0;
         private int _numberOfItems = 0;

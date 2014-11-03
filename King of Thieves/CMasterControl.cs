@@ -10,6 +10,7 @@ namespace King_of_Thieves
     static class CMasterControl
     {
         public static Actors.HUD.health.CHealthController healthController;
+        public static Actors.HUD.buttons.CButtonController buttonController;
         public static Sound.CAudioPlayer audioPlayer;
         public static Map.CMapManager mapManager = new Map.CMapManager();
         public static GameTime gameTime;

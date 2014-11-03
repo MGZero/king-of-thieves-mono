@@ -34,6 +34,7 @@ namespace King_of_Thieves.Map
 
         public CLayer(string name, Actors.CComponent[] components, CTile[] tiles, ref Graphics.CSprite image, double version = 1)
         {
+            _width = 0; _height = 0;
             NAME = name;
             _tiles.AddRange(tiles);
             _image = image;

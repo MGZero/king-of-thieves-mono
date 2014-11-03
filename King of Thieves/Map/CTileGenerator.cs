@@ -9,8 +9,6 @@ namespace King_of_Thieves.Map
 {
     class CTileGenerator
     {
-        private RenderTarget2D _renderTarget;
-        private SpriteBatch _builderBatch;
 
 
     }

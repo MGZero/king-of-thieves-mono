@@ -67,6 +67,9 @@ namespace King_of_Thieves.Graphics
             textures.Add("Player:ShockDown", new CTextureAtlas("Player", 32, 32, 1, "37:30", "38:30", 10));
             textures.Add("Player:ShockLeft", new CTextureAtlas("Player", 32, 32, 1, "40:30", "41:30", 10));
             textures.Add("Player:ShockUp", new CTextureAtlas("Player", 32, 32, 1, "37:31", "38:31", 10));
+            textures.Add("Player:FreezeDown", new CTextureAtlas("Player", 32, 32, 1, "11:4", "11:4", 0));
+            textures.Add("Player:FreezeUp", new CTextureAtlas("Player", 32, 32, 1, "13:4", "13:4", 0));
+            textures.Add("Player:FreezeLeft", new CTextureAtlas("Player", 32, 32, 1, "12:4", "12:4", 0));
 
             textures.Add("GerudoSword:SwingDown", new CTextureAtlas("Swords", 64, 64, 1, "0:0", "7:0", 55));
             textures.Add("GerudoSword:SwingUp", new CTextureAtlas("Swords", 64, 64, 1, "0:1", "7:1", 55));
@@ -118,7 +121,9 @@ namespace King_of_Thieves.Graphics
             textures.Add("HUD:health3", new CTextureAtlas("health", 16, 16, 1, "3:0", "3:0", 0));
             textures.Add("HUD:health4", new CTextureAtlas("health", 16, 16, 1, "4:0", "4:0", 0));
             textures.Add("HUD:health5", new CTextureAtlas("health", 16, 16, 1, "5:0", "5:0", 0));
-
+            textures.Add("HUD:buttonLeft", new CTextureAtlas("hudButtons", 32, 32, 0, "0:0", "0:0", 0));
+            textures.Add("HUD:buttonRight", new CTextureAtlas("hudButtons", 32, 32, 0, "1:0", "1:0", 0));
+            textures.Add("HUD:buttonUp", new CTextureAtlas("hudButtons", 32, 32, 0, "2:0", "2:0", 0));
         }
 
         public static void addRawTexture(string textureName, string fileNameNoExt)
@@ -152,6 +157,7 @@ namespace King_of_Thieves.Graphics
             //hud
             rawTextures.Add("hud", _content.Load<Texture2D>("hud/textbox2"));
             rawTextures.Add("health", _content.Load<Texture2D>("hud/hearts"));
+            rawTextures.Add("hudButtons", _content.Load<Texture2D>("hud/buttons"));
         }
 
         public static void cleanUp(string nameSpace = "")

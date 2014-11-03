@@ -13,7 +13,6 @@ namespace King_of_Thieves.Actors.HUD.health
         private bool _isActive = false;
         private static Graphics.CSprite[] _imageCache = null;
         private const int _MAX_HEARTS_PER_ROW = 10;
-        private Vector2 _fixedPosition = Vector2.Zero;
 
         public CHealth(int heartNumber, int portionFilled, bool isActive)
         {

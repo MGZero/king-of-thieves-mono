@@ -12,7 +12,6 @@ namespace King_of_Thieves.Map
 {
     class CMap
     {
-        private int _componentCount = 0;
         public CLayer[] _layers = null;
         private static Regex _coordFormat = new Regex("^[0-9]+:[0-9]+$");
         private static Regex _valSplitter = new Regex(":");

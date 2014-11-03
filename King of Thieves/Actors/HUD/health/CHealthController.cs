@@ -107,7 +107,12 @@ namespace King_of_Thieves.Actors.HUD.health
             if (createNewHeart)
                 _hearts[currentHeartIndex] = new CHealth(currentHeartIndex + 1, portionFilled, isActive);
             else
+            {
                 _hearts[currentHeartIndex].portionFilled = portionFilled;
+
+                if (currentHeartIndex + 1 < _hearts.Length)
+                    _hearts[currentHeartIndex + 1].portionFilled = 0;
+            }
         }
     }
 }

@@ -7,8 +7,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\04_-_Phantom_Ganon.xnb</Output>
-      <Extra>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\04_-_Phantom_Ganon.wma</Extra>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\04_-_Phantom_Ganon.xnb</Output>
+      <Extra>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\04_-_Phantom_Ganon.wma</Extra>
       <Time>2013-06-03T22:22:58.9351594-04:00</Time>
     </Item>
     <Item>
@@ -17,7 +17,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\AGES_TILESET_1F.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\AGES_TILESET_1F.xnb</Output>
       <Time>2013-06-03T23:43:44.2202938-04:00</Time>
     </Item>
     <Item>
@@ -26,7 +26,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\chuchuGreen.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\chuchuGreen.xnb</Output>
       <Time>2013-06-03T22:22:58.9411597-04:00</Time>
     </Item>
     <Item>
@@ -35,7 +35,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\cursorIcon.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\cursorIcon.xnb</Output>
       <Time>2013-06-03T22:22:58.9411597-04:00</Time>
     </Item>
     <Item>
@@ -44,7 +44,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\effects.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\effects.xnb</Output>
       <Time>2013-06-11T01:14:20.2241464-04:00</Time>
     </Item>
     <Item>
@@ -53,7 +53,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\icons.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\icons.xnb</Output>
       <Time>2013-06-03T22:22:58.9411597-04:00</Time>
     </Item>
     <Item>
@@ -62,7 +62,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\keese.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\keese.xnb</Output>
       <Time>2013-06-11T01:14:20.2291464-04:00</Time>
     </Item>
     <Item>
@@ -71,7 +71,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\maple.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\maple.xnb</Output>
       <Time>2014-07-20T21:55:47.717471-04:00</Time>
     </Item>
     <Item>
@@ -80,7 +80,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\mcDungeon2.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\mcDungeon2.xnb</Output>
       <Time>2013-06-03T22:22:58.9491602-04:00</Time>
     </Item>
     <Item>
@@ -89,7 +89,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\menu.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\menu.xnb</Output>
       <Time>2013-06-03T22:22:58.9501602-04:00</Time>
     </Item>
     <Item>
@@ -98,8 +98,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\Player.xnb</Output>
-      <Time>2013-06-11T01:14:20.2141464-04:00</Time>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\Player.xnb</Output>
+      <Time>2014-11-02T21:36:49.8232862-05:00</Time>
     </Item>
     <Item>
       <Source>PlayerIdleDown.png</Source>
@@ -107,7 +107,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\PlayerIdleDown.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\PlayerIdleDown.xnb</Output>
       <Time>2013-06-03T22:22:58.9401596-04:00</Time>
     </Item>
     <Item>
@@ -116,7 +116,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\pointer.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\pointer.xnb</Output>
       <Time>2013-06-03T22:22:58.9501602-04:00</Time>
     </Item>
     <Item>
@@ -125,7 +125,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\potSmall.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\potSmall.xnb</Output>
       <Time>2013-06-11T01:14:20.2291464-04:00</Time>
     </Item>
     <Item>
@@ -134,7 +134,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\Swords-skeleton.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\Swords-skeleton.xnb</Output>
       <Time>2013-06-03T22:22:58.9401596-04:00</Time>
     </Item>
     <Item>
@@ -143,7 +143,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\Swords.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\Swords.xnb</Output>
       <Time>2013-06-03T22:22:58.9401596-04:00</Time>
     </Item>
     <Item>
@@ -152,7 +152,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\test.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\test.xnb</Output>
       <Time>2013-06-03T22:22:58.9521603-04:00</Time>
     </Item>
     <Item>
@@ -161,7 +161,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\textbox.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\textbox.xnb</Output>
       <Time>2014-05-03T23:19:19.016548-04:00</Time>
     </Item>
     <Item>
@@ -170,7 +170,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\textbox2.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\textbox2.xnb</Output>
       <Time>2014-10-12T10:55:05.1137367-04:00</Time>
     </Item>
     <Item>
@@ -179,7 +179,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\tiletest.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\tiletest.xnb</Output>
       <Time>2013-06-03T22:22:58.9521603-04:00</Time>
     </Item>
     <Item>
@@ -188,7 +188,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\Untitled-1.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\Untitled-1.xnb</Output>
       <Time>2014-05-03T23:19:19.016548-04:00</Time>
     </Item>
     <Item>
@@ -197,7 +197,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\whiteBox.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\whiteBox.xnb</Output>
       <Time>2013-06-03T22:22:58.9531604-04:00</Time>
     </Item>
     <Item>
@@ -206,7 +206,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\hud\hearts.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\hud\hearts.xnb</Output>
       <Time>2014-10-12T10:55:05.1107365-04:00</Time>
     </Item>
     <Item>
@@ -215,7 +215,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\hud\textbox2.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\hud\textbox2.xnb</Output>
       <Time>2014-10-12T10:55:05.1107365-04:00</Time>
     </Item>
     <Item>
@@ -224,7 +224,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\tilesets\indoors\house.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\tilesets\indoors\house.xnb</Output>
       <Time>2014-10-12T10:55:05.1147367-04:00</Time>
     </Item>
     <Item>
@@ -233,7 +233,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\tilesets\items\chests-small.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\tilesets\items\chests-small.xnb</Output>
       <Time>2014-10-12T19:01:08.7468011-04:00</Time>
     </Item>
     <Item>
@@ -242,7 +242,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\title\title-background.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\title\title-background.xnb</Output>
       <Time>2014-10-26T18:59:24.0381144-04:00</Time>
     </Item>
     <Item>
@@ -251,7 +251,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\title\title-logo.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\title\title-logo.xnb</Output>
       <Time>2014-10-26T18:59:37.1288631-04:00</Time>
     </Item>
     <Item>
@@ -260,7 +260,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\cursor.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\cursor.xnb</Output>
       <Time>2013-06-03T22:22:58.9411597-04:00</Time>
     </Item>
     <Item>
@@ -269,7 +269,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\lttp_heart.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\lttp_heart.xnb</Output>
       <Time>2013-06-03T22:22:58.9421598-04:00</Time>
     </Item>
     <Item>
@@ -278,7 +278,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\health\Low_Health_Beep.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\health\Low_Health_Beep.xnb</Output>
       <Time>2005-07-03T16:34:04-04:00</Time>
     </Item>
     <Item>
@@ -287,7 +287,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\health\lttp_heart.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\health\lttp_heart.xnb</Output>
       <Time>2005-07-02T11:14:54-04:00</Time>
     </Item>
     <Item>
@@ -296,7 +296,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\linkAttack1.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\linkAttack1.xnb</Output>
       <Time>2013-06-03T22:22:58.9501602-04:00</Time>
     </Item>
     <Item>
@@ -305,7 +305,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\linkAttack2.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\linkAttack2.xnb</Output>
       <Time>2013-06-03T22:22:58.9511603-04:00</Time>
     </Item>
     <Item>
@@ -314,7 +314,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\linkAttack3.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\linkAttack3.xnb</Output>
       <Time>2013-06-03T22:22:58.9511603-04:00</Time>
     </Item>
     <Item>
@@ -323,7 +323,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\linkAttack4.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\linkAttack4.xnb</Output>
       <Time>2013-06-03T22:22:58.9521603-04:00</Time>
     </Item>
     <Item>
@@ -332,7 +332,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\linkSwordSlash.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\linkSwordSlash.xnb</Output>
       <Time>2013-06-03T22:22:58.9521603-04:00</Time>
     </Item>
     <Item>
@@ -341,7 +341,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\MC_Shatter.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\MC_Shatter.xnb</Output>
       <Time>2013-06-11T01:14:20.2291464-04:00</Time>
     </Item>
     <Item>
@@ -350,7 +350,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\rooster.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\rooster.xnb</Output>
       <Time>2013-06-25T10:39:19.7449423-04:00</Time>
     </Item>
     <Item>
@@ -359,7 +359,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\text\TextBoxContinue.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\text\TextBoxContinue.xnb</Output>
       <Time>2014-10-12T10:55:05.1117366-04:00</Time>
     </Item>
     <Item>
@@ -368,7 +368,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\text\TextBoxDone.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\text\TextBoxDone.xnb</Output>
       <Time>2014-10-12T10:55:05.1127366-04:00</Time>
     </Item>
     <Item>
@@ -377,35 +377,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\wolf.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\wolf.xnb</Output>
       <Time>2013-06-25T10:39:19.7469424-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Fonts\benchmarker.spritefont</Source>
-      <Name>Fonts\benchmarker</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\Fonts\benchmarker.xnb</Output>
-      <Time>2013-06-11T01:14:20.1941463-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Fonts\MenuFont.spritefont</Source>
-      <Name>Fonts\MenuFont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\Fonts\MenuFont.xnb</Output>
-      <Time>2013-06-03T22:22:58.9351594-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Fonts\sherwood.spritefont</Source>
-      <Name>Fonts\sherwood</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\Fonts\sherwood.xnb</Output>
-      <Time>2014-10-12T10:55:05.1097364-04:00</Time>
     </Item>
     <Item>
       <Source>sounds\link\shocked.wav</Source>
@@ -413,7 +386,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\link\shocked.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\link\shocked.xnb</Output>
       <Time>2014-10-31T10:52:42.6319889-04:00</Time>
     </Item>
     <Item>
@@ -422,7 +395,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\link\hurt1.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\link\hurt1.xnb</Output>
       <Time>2014-10-31T12:06:51.9814771-04:00</Time>
     </Item>
     <Item>
@@ -431,7 +404,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\link\hurt2.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\link\hurt2.xnb</Output>
       <Time>2014-10-31T12:06:52.0024783-04:00</Time>
     </Item>
     <Item>
@@ -440,7 +413,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\link\hurt3.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\link\hurt3.xnb</Output>
       <Time>2014-10-31T12:06:52.0104788-04:00</Time>
     </Item>
     <Item>
@@ -449,7 +422,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\link\hurt4.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\link\hurt4.xnb</Output>
       <Time>2014-10-31T12:06:52.0174792-04:00</Time>
     </Item>
     <Item>
@@ -458,8 +431,44 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\link\hurt5.xnb</Output>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\link\hurt5.xnb</Output>
       <Time>2014-10-31T12:06:51.9744767-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\benchmarker.spritefont</Source>
+      <Name>Fonts\benchmarker</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\Fonts\benchmarker.xnb</Output>
+      <Time>2013-06-11T01:14:20.1941463-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\MenuFont.spritefont</Source>
+      <Name>Fonts\MenuFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\Fonts\MenuFont.xnb</Output>
+      <Time>2013-06-03T22:22:58.9351594-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\sherwood.spritefont</Source>
+      <Name>Fonts\sherwood</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\Fonts\sherwood.xnb</Output>
+      <Time>2014-10-12T10:55:05.1097364-04:00</Time>
+    </Item>
+    <Item>
+      <Source>hud\buttons.png</Source>
+      <Name>hud\buttons</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\hud\buttons.xnb</Output>
+      <Time>2014-11-02T22:27:34.0634068-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -467,10 +476,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>PSM</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContentContent\</RootDirectory>
-      <LoggerRootDirectory>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\</LoggerRootDirectory>
-      <IntermediateDirectory>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContentContent\obj\PSM\</IntermediateDirectory>
-      <OutputDirectory>G:\ZFGC3\KoT\mono\King of Thieves\King of ThievesContent\King of ThievesContent\bin\PSM\Content\</OutputDirectory>
+      <RootDirectory>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContentContent\</RootDirectory>
+      <LoggerRootDirectory>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\</LoggerRootDirectory>
+      <IntermediateDirectory>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContentContent\obj\PSM\</IntermediateDirectory>
+      <OutputDirectory>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

@@ -24,6 +24,12 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Keese
         public override void collide(object sender, CActor collider)
         {
             base.collide(sender, collider);
+
+            if (collider is Player.CPlayer)
+            {
+                if (!INVINCIBLE_STATES.Contains(collider.state))
+                    collider.dealDamange(4, collider);
+            }
         }
     }
 }

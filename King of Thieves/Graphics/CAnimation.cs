@@ -9,7 +9,6 @@ namespace King_of_Thieves.Graphics
 {
     public class CAnimation
     {
-        private float _counter = 0;
         private float _speed = 0;
         private float _speedHold = 0;
 
@@ -33,7 +32,6 @@ namespace King_of_Thieves.Graphics
 
         public void reset()
         {
-            _counter = 0;
             _speed = _speedHold;
         }
     }

@@ -41,12 +41,13 @@ Content\sounds\rooster.xnb
 Content\sounds\text\TextBoxContinue.xnb
 Content\sounds\text\TextBoxDone.xnb
 Content\sounds\wolf.xnb
-Content\Fonts\benchmarker.xnb
-Content\Fonts\MenuFont.xnb
-Content\Fonts\sherwood.xnb
 Content\sounds\link\shocked.xnb
 Content\sounds\link\hurt1.xnb
 Content\sounds\link\hurt2.xnb
 Content\sounds\link\hurt3.xnb
 Content\sounds\link\hurt4.xnb
 Content\sounds\link\hurt5.xnb
+Content\Fonts\benchmarker.xnb
+Content\Fonts\MenuFont.xnb
+Content\Fonts\sherwood.xnb
+Content\hud\buttons.xnb
