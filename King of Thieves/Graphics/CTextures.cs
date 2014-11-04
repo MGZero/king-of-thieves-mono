@@ -112,6 +112,9 @@ namespace King_of_Thieves.Graphics
             textures.Add("items:decor:potSmall", new CTextureAtlas("potSmall", 48, 48, 1, "0:0", "0:0"));
             textures.Add("items:decor:potSmallBreak", new CTextureAtlas("potSmall", 48, 48, 1, "1:0", "8:0",10));
 
+            //effects
+            textures.Add("effects:explosion", new CTextureAtlas("effects:explosion", 64, 64, 0, "0:0", "10:0", 10));
+            textures.Add("effects:smokePoof", new CTextureAtlas("effects:explosion", 64, 64, 0, "2:0", "10:0", 10));
 
             //HUD
             textures.Add("HUD:text:textBox", new CTextureAtlas("hud", 303, 74, 0, "0:0", "0:0", 0));
@@ -149,10 +152,15 @@ namespace King_of_Thieves.Graphics
             rawTextures.Add("effects", _content.Load<Texture2D>("effects"));
             rawTextures.Add("potSmall", _content.Load<Texture2D>("potSmall"));
             rawTextures.Add("maple", _content.Load<Texture2D>("maple"));
+
+            
             
             //tilesets
             rawTextures.Add("tileset:indoors:house",_content.Load<Texture2D>(@"tilesets/indoors/house"));
             rawTextures.Add("tileset:items:chests-small", _content.Load<Texture2D>(@"tilesets/items/chests-small"));
+
+            //effects
+            rawTextures.Add("effects:explosion", _content.Load<Texture2D>(@"effects/bomb-explosion"));
 
             //hud
             rawTextures.Add("hud", _content.Load<Texture2D>("hud/textbox2"));

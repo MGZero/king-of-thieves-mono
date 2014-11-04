@@ -470,6 +470,24 @@
       <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\hud\buttons.xnb</Output>
       <Time>2014-11-02T22:27:34.0634068-05:00</Time>
     </Item>
+    <Item>
+      <Source>effects\bomb-explosion.png</Source>
+      <Name>effects\bomb-explosion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\effects\bomb-explosion.xnb</Output>
+      <Time>2014-11-03T21:39:38.4970401-05:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\npc\wizzrobe.png</Source>
+      <Name>sprites\npc\wizzrobe</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sprites\npc\wizzrobe.xnb</Output>
+      <Time>2014-11-03T22:37:25.4383378-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

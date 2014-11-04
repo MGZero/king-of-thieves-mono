@@ -141,3 +141,5 @@ G:\ZFGC3\KoT\mono\King of Thieves-mono\King of Thieves\obj\x86\Debug\King_of_Thi
 G:\ZFGC3\KoT\mono\King of Thieves-mono\King of Thieves\obj\x86\Debug\OpenTK.GLControl.resources
 G:\ZFGC3\KoT\mono\King of Thieves-mono\King of Thieves\obj\x86\Debug\King of Thieves.csproj.GenerateResource.Cache
 G:\ZFGC3\KoT\mono\King of Thieves-mono\King of Thieves\bin\WindowsGL\Debug\Content\hud\buttons.xnb
+G:\ZFGC3\KoT\mono\King of Thieves-mono\King of Thieves\bin\WindowsGL\Debug\Content\effects\bomb-explosion.xnb
+G:\ZFGC3\KoT\mono\King of Thieves-mono\King of Thieves\bin\WindowsGL\Debug\Content\sprites\npc\wizzrobe.xnb
