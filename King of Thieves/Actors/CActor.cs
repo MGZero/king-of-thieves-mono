@@ -196,6 +196,29 @@ namespace King_of_Thieves.Actors
             }
         }
 
+        public void lookAt(Vector2 position)
+        {
+            double angle = MathExt.MathExt.angle(_position, position);
+
+            if (angle >= 225 && angle <= 315)
+            {
+                _direction = DIRECTION.DOWN;
+            }
+            else if (angle >= 135 && angle < 225)
+            {
+                _direction = DIRECTION.LEFT;
+            }
+            else if (angle >= 45 && angle < 135)
+            {
+                _direction = DIRECTION.UP;
+            }
+            else if (angle >= 0 || angle >= 315)
+            {
+                _direction = DIRECTION.RIGHT;
+            }
+
+        }
+
         public string getMapHeaderInfo()
         {
             return _componentAddress + ";" + _name + ";" + dataType + ";" + position.X + ":" + position.Y;
