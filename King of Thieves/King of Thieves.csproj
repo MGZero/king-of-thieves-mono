@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{60FDD863-9CE1-49F7-8FFA-404B703E86AC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>King_of_Thieves</RootNamespace>
+    <AssemblyName>King of Thieves</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\WindowsGL\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\WindowsGL\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Actors\CActor.cs" />
+    <Compile Include="Actors\CActorPacket.cs" />
+    <Compile Include="Actors\CActorTest.cs" />
+    <Compile Include="Actors\CComponent.cs" />
+    <Compile Include="Actors\Collision\CHitBox.cs" />
+    <Compile Include="Actors\Collision\CSolidTile.cs" />
+    <Compile Include="Actors\Controllers\CEditorInputController.cs" />
+    <Compile Include="Actors\Controllers\CEditorNew.cs" />
+    <Compile Include="Actors\Controllers\CEditorOpen.cs" />
+    <Compile Include="Actors\Controllers\CEditorSave.cs" />
+    <Compile Include="Actors\Controllers\GameControllers\CDayClock.cs" />
+    <Compile Include="Actors\Effects\CFire.cs" />
+    <Compile Include="Actors\Effects\CIce.cs" />
+    <Compile Include="Actors\Effects\CShadow.cs" />
+    <Compile Include="Actors\Effects\CThunder.cs" />
+    <Compile Include="Actors\HUD\buttons\CButton.cs" />
+    <Compile Include="Actors\HUD\buttons\CButtonController.cs" />
+    <Compile Include="Actors\HUD\CCameraBoundary.cs" />
+    <Compile Include="Actors\HUD\CHUDElement.cs" />
+    <Compile Include="Actors\HUD\health\CHealth.cs" />
+    <Compile Include="Actors\HUD\health\CHealthController.cs" />
+    <Compile Include="Actors\HUD\Text\CTextBox.cs" />
+    <Compile Include="Actors\Items\CLiftable.cs" />
+    <Compile Include="Actors\Items\decoration\CChest.cs" />
+    <Compile Include="Actors\Items\decoration\CPot.cs" />
+    <Compile Include="Actors\Items\Drops\CDroppable.cs" />
+    <Compile Include="Actors\Items\Drops\playerStats\CDropHeart.cs" />
+    <Compile Include="Actors\Items\Swords\CGerudoSword.cs" />
+    <Compile Include="Actors\Menu\CMenu.cs" />
+    <Compile Include="Actors\Menu\CMenuCursor.cs" />
+    <Compile Include="Actors\Menu\CMenuItem.cs" />
+    <Compile Include="Actors\NPC\Enemies\CBaseEnemy.cs" />
+    <Compile Include="Actors\NPC\Enemies\Chuchus\CBaseChuChu.cs" />
+    <Compile Include="Actors\NPC\Enemies\Chuchus\CGreenChuChu.cs" />
+    <Compile Include="Actors\NPC\Enemies\Keese\CBaseKeese.cs" />
+    <Compile Include="Actors\NPC\Enemies\Keese\CKeese.cs" />
+    <Compile Include="Actors\NPC\Enemies\Keese\CKeeseFire.cs" />
+    <Compile Include="Actors\NPC\Enemies\Keese\CKeeseIce.cs" />
+    <Compile Include="Actors\NPC\Enemies\Keese\CKeeseShadow.cs" />
+    <Compile Include="Actors\NPC\Enemies\Keese\CKeeseThunder.cs" />
+    <Compile Include="Actors\NPC\Enemies\Wizzrobe\CBaseWizzrobe.cs" />
+    <Compile Include="Actors\NPC\Other\Maple\CMaple.cs" />
+    <Compile Include="Actors\Player\CPlayer.cs" />
+    <Compile Include="Actors\World\Water\CBaseWater.cs" />
+    <Compile Include="Actors\World\Water\CDeepWater.cs" />
+    <Compile Include="Actors\World\Water\CShallowWater.cs" />
+    <Compile Include="CMasterControl.cs" />
+    <Compile Include="Counters\CBaseCounter.cs" />
+    <Compile Include="CTimer.cs" />
+    <Compile Include="Data Struct\Graph\NodeGraph.cs" />
+    <Compile Include="Data Struct\Node.cs" />
+    <Compile Include="Events.cs" />
+    <Compile Include="Forms\Map Editor\EditorComponents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Map Editor\EditorComponents.Designer.cs">
+      <DependentUpon>EditorComponents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Map Editor\EditorTiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Map Editor\EditorTiles.Designer.cs">
+      <DependentUpon>EditorTiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Map Editor\frmMapEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Map Editor\frmMapEditor.Designer.cs">
+      <DependentUpon>frmMapEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TextureAtlas\frmTextureAtlas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TextureAtlas\frmTextureAtlas.Designer.cs">
+      <DependentUpon>frmTextureAtlas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game1.cs" />
+    <Compile Include="GLControl\CarbonGLControl.cs" />
+    <Compile Include="GLControl\DummyGLControl.cs" />
+    <Compile Include="GLControl\GLControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GLControl\GLControl.Designer.cs">
+      <DependentUpon>GLControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GLControl\GLControlFactory.cs" />
+    <Compile Include="GLControl\IGLControl.cs" />
+    <Compile Include="GLControl\WinGLControl.cs" />
+    <Compile Include="GLControl\X11GLControl.cs" />
+    <Compile Include="GraphicsDeviceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphicsDeviceService.cs" />
+    <Compile Include="Graphics\CAnimation.cs" />
+    <Compile Include="Graphics\CCamera.cs" />
+    <Compile Include="Graphics\CEffects.cs" />
+    <Compile Include="Graphics\CGraphics.cs" />
+    <Compile Include="Graphics\CRenderable.cs" />
+    <Compile Include="Graphics\CSprite.cs" />
+    <Compile Include="Graphics\CTexAtlasControl.cs" />
+    <Compile Include="Graphics\CTextureAtlas.cs" />
+    <Compile Include="Graphics\CTextures.cs" />
+    <Compile Include="Graphics\CVertex.cs" />
+    <Compile Include="Input\CInput.cs" />
+    <Compile Include="Map\CLayer.cs" />
+    <Compile Include="Map\CMap.cs" />
+    <Compile Include="Map\CMapManager.cs" />
+    <Compile Include="Map\ComponentFactory.cs" />
+    <Compile Include="Map\ComponentManager.cs" />
+    <Compile Include="Map\CTile.cs" />
+    <Compile Include="Map\CTileGenerator.cs" />
+    <Compile Include="Map\EActorProperties.cs" />
+    <Compile Include="MathExt\MathExt.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceContainer.cs" />
+    <Compile Include="Sound\CAudioPlayer.cs" />
+    <Compile Include="Sound\CSound.cs" />
+    <Compile Include="SpinningTriangleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usr\local\DevMenu.cs" />
+    <Compile Include="usr\local\EditorMode.cs" />
+    <Compile Include="usr\local\PlayableState.cs" />
+    <Compile Include="usr\local\splash\CTitleState.cs" />
+    <Compile Include="usr\local\Testbed.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="OpenTK">
+      <HintPath>C:\Program Files (x86)\MSBuild\..\MonoGame\v3.0\Assemblies\WindowsGL\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>C:\Program Files (x86)\MSBuild\..\MonoGame\v3.0\Assemblies\WindowsGL\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Lidgren.Network">
+      <HintPath>C:\Program Files (x86)\MSBuild\..\MonoGame\v3.0\Assemblies\WindowsGL\Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Tao.Sdl">
+      <HintPath>C:\Program Files (x86)\MSBuild\..\MonoGame\v3.0\Assemblies\WindowsGL\Tao.Sdl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GLControl\OpenTK.GLControl.csproj" />
+    <Content Include="Icon.ico" />
+    <Content Include="SDL.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\" />
+    <Folder Include="Menu\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\Map Editor\EditorComponents.resx">
+      <DependentUpon>EditorComponents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Map Editor\EditorTiles.resx">
+      <DependentUpon>EditorTiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Map Editor\frmMapEditor.resx">
+      <DependentUpon>frmMapEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TextureAtlas\frmTextureAtlas.resx">
+      <DependentUpon>frmTextureAtlas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GLControl\GLControl.resx">
+      <DependentUpon>GLControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\gearsvge\GearsVGE\GearsVGE.csproj">
+      <Project>{767CE38D-0AA7-47AD-AE9E-5F81A85455A0}</Project>
+      <Name>GearsVGE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\King of ThievesContent\King of ThievesContent\King of ThievesContent.csproj">
+      <Project>{D80E02BD-5FA5-4E48-B7E4-AF20F22B7339}</Project>
+      <Name>King of ThievesContent</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

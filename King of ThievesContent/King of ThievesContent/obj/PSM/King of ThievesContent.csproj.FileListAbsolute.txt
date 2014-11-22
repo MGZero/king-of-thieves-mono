@@ -110,3 +110,6 @@ G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesCon
 G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\obj\PSM\Microsoft.Xna.Framework.RuntimeProfile.txt
 G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\obj\PSM\IgnoreMe.dll
 G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\hud\buttons.xnb
+G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\obj\PSM\King of ThievesContent.csprojResolveAssemblyReference.cache
+G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\effects\bomb-explosion.xnb
+G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sprites\npc\wizzrobe.xnb
