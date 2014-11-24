@@ -38,21 +38,19 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
             _type = type;
             //cache the textures needed
             if (!Graphics.CTextures.rawTextures.ContainsKey(_NPC_WIZZROBE))
+            {
                 Graphics.CTextures.rawTextures.Add(_NPC_WIZZROBE, CMasterControl.glblContent.Load<Texture2D>(@"sprites/npc/wizzrobe"));
+            }
 
             _wizzrobeCount += 1;
             _direction = DIRECTION.DOWN;
+            _vanish();
         }
 
         public override void update(Microsoft.Xna.Framework.GameTime gameTime)
         {
             base.update(gameTime);
 
-            switch (_direction)
-            {
-                case DIRECTION.DOWN:
-                    break;
-            }
         }
 
         public override void destroy(object sender)
@@ -60,9 +58,25 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
             _wizzrobeCount--;
 
             if (_wizzrobeCount <= 0)
-                Graphics.CTextures.rawTextures.Remove(_NPC_WIZZROBE);
+            {
+                cleanUp();
+                _wizzrobeCount = 0;
+            }
 
             base.destroy(sender);
+        }
+
+        protected override void cleanUp()
+        {
+            Graphics.CTextures.textures.Remove(_WIZZROBE_ATTACK_DOWN);
+            Graphics.CTextures.textures.Remove(_WIZZROBE_ATTACK_LEFT);
+            Graphics.CTextures.textures.Remove(_WIZZROBE_ATTACK_UP);
+            Graphics.CTextures.textures.Remove(_WIZZROBE_ATTACK_RIGHT);
+            Graphics.CTextures.textures.Remove(_WIZZROBE_IDLE_DOWN);
+            Graphics.CTextures.textures.Remove(_WIZZROBE_IDLE_LEFT);
+            Graphics.CTextures.textures.Remove(_WIZZROBE_IDLE_RIGHT);
+            Graphics.CTextures.textures.Remove(_WIZZROBE_IDLE_UP);
+            Graphics.CTextures.rawTextures.Remove(_NPC_WIZZROBE);
         }
 
         public override void timer0(object sender)
@@ -71,13 +85,18 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
 
             //go into attack state
             startTimer2(_ATTACK_TIME);
-            _state = ACTOR_STATES.ATTACK;
+            _attack();
+        }
+
+        public override void timer1(object sender)
+        {
+            base.timer1(sender);
+            _appear();
         }
 
         public override void timer2(object sender)
         {
             base.timer2(sender);
-
             _attack();
         }
 
@@ -91,6 +110,18 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
             {
                 case DIRECTION.DOWN:
                     swapImage(_WIZZROBE_IDLE_DOWN);
+                    break;
+
+                case DIRECTION.UP:
+                    swapImage(_WIZZROBE_IDLE_UP);
+                    break;
+
+                case DIRECTION.LEFT:
+                    swapImage(_WIZZROBE_IDLE_LEFT);
+                    break;
+
+                case DIRECTION.RIGHT:
+                    swapImage(_WIZZROBE_IDLE_RIGHT);
                     break;
             }
         }
@@ -107,7 +138,10 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
 
         private void _attack()
         {
-            _vanish();
+            switch (_direction)
+            {
+
+            }
         }
 
         public override void drawMe(bool useOverlay = false)

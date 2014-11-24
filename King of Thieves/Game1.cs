@@ -193,6 +193,8 @@ namespace King_of_Thieves
             
             Master.Draw(spriteBatch);
 
+            CEffects.drawThisShit();
+
             textTest.drawMe();
 
             if (CActor.showHitBox)

@@ -122,6 +122,8 @@ namespace King_of_Thieves.Actors
         public virtual void mouseClick(object sender) { }
         public virtual void click(object sender) { }
         public virtual void tap(object sender) { }
+
+        protected virtual void cleanUp() { }
         public virtual void destroy(object sender)
         {
             _hitBox.destroy();
@@ -480,7 +482,7 @@ namespace King_of_Thieves.Actors
 
             //Color overlay = useOverlay ? Controllers.GameControllers.CDayClock.overlay : Color.White;
 
-            if (image != null)
+            if (image != null && _state != ACTOR_STATES.INVISIBLE)
                 _animationHasEnded = image.draw((int)_position.X, (int)_position.Y, useOverlay);
 
             if (showHitBox && _hitBox != null)

@@ -20,26 +20,27 @@ namespace King_of_Thieves.Graphics
         private bool _flipV = false;
         private int _totalFrames = 0;
         private int _framesPassed = 0;
+        private bool _isEffect = false;
 
-        public CSprite(string atlasName, bool flipH = false, bool flipV = false, Effect shader = null, params VertexPositionColor[] vertices)
+        public CSprite(string atlasName, bool flipH = false, bool flipV = false, Effect shader = null, bool isEffect = false, params VertexPositionColor[] vertices)
             : base(shader, vertices)
         {
-            init(atlasName, Graphics.CTextures.textures[atlasName], shader, flipH, flipV, vertices);
+            init(atlasName, Graphics.CTextures.textures[atlasName], shader, flipH, flipV, isEffect, vertices);
         }
 
-        public CSprite(string atlasName, Dictionary<string, CTextureAtlas> texture, Effect shader = null, bool flipH = false, bool flipV = false, params VertexPositionColor[] vertices)
+        public CSprite(string atlasName, Dictionary<string, CTextureAtlas> texture, Effect shader = null, bool flipH = false, bool flipV = false, bool isEffect = false, params VertexPositionColor[] vertices)
             : base(shader, vertices)
         {
-            init(atlasName, texture[atlasName], shader, flipH, flipV, vertices);
+            init(atlasName, texture[atlasName], shader, flipH, flipV, isEffect, vertices);
         }
 
-        public CSprite(string atlasName, CTextureAtlas atlas, Effect shader = null, bool flipH = false, bool flipV = false, params VertexPositionColor[] vertices)
+        public CSprite(string atlasName, CTextureAtlas atlas, Effect shader = null, bool flipH = false, bool flipV = false, bool isEffect = false, params VertexPositionColor[] vertices)
             : base(shader, vertices)
         {
-            init(atlasName, atlas, shader, flipH, flipV, vertices);
+            init(atlasName, atlas, shader, flipH, flipV, isEffect, vertices);
         }
 
-        private void init(string atlasName, CTextureAtlas atlas, Effect shader = null, bool flipH = false, bool flipV = false, params VertexPositionColor[] vertices)
+        private void init(string atlasName, CTextureAtlas atlas, Effect shader = null, bool flipH = false, bool flipV = false, bool isEffect = false, params VertexPositionColor[] vertices)
         {
             _imageAtlas = atlas;
             _atlasName = atlasName;
@@ -48,6 +49,7 @@ namespace King_of_Thieves.Graphics
             _flipH = flipH;
             _flipV = flipV;
             _totalFrames = atlas.tileXCount * atlas.tileYCount;
+            _isEffect = isEffect;
         }
 
         public override bool draw(int x, int y, bool useOverlay = false)
