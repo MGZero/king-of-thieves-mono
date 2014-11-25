@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
 
 namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
 {
@@ -20,17 +21,17 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
         private const int _IDLE_TIME = 240; //the time between appearing and attacking/dissapearing
         private readonly int[] _VANISH_TIME = {240,180,300}; //the time they are invisible for
         private const int _ATTACK_TIME = 60; //the time for playing the attack frames
-        private const string _NPC_WIZZROBE = "npc:wizzrobe";
+        protected readonly static string _NPC_WIZZROBE = "npc:wizzrobe";
         private static int _wizzrobeCount = 0;
 
-        private static string _WIZZROBE_IDLE_DOWN = "wizzrobe:idleDown";
-        private static string _WIZZROBE_ATTACK_DOWN = "wizzrobe:attackDown";
-        private static string _WIZZROBE_IDLE_LEFT = "wizzrobe:idleLeft";
-        private static string _WIZZROBE_ATTACK_LEFT = "wizzrobe:attackLeft";
-        private static string _WIZZROBE_IDLE_RIGHT = "wizzrobe:idleRight";
-        private static string _WIZZROBE_ATTACK_RIGHT = "wizzrobe:attackRight";
-        private static string _WIZZROBE_IDLE_UP = "wizzrobe:idleUp";
-        private static string _WIZZROBE_ATTACK_UP = "wizzrobe:attackUp";
+        protected readonly static string _IDLE_DOWN = "idleDown";
+        protected readonly static string _ATTACK_DOWN = "attackDown";
+        protected readonly static string _IDLE_LEFT = "idleLeft";
+        protected readonly static string _ATTACK_LEFT = "attackLeft";
+        protected readonly static string _IDLE_RIGHT = "idleRight";
+        protected readonly static string _ATTACK_RIGHT = "attackRight";
+        protected readonly static string _IDLE_UP = "idleUp";
+        protected readonly static string _ATTACK_UP = "attackUp";
 
         public CBaseWizzrobe(WIZZROBE_TYPE type, params dropRate[] drops)
             : base(drops)
@@ -38,19 +39,24 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
             _type = type;
             //cache the textures needed
             if (!Graphics.CTextures.rawTextures.ContainsKey(_NPC_WIZZROBE))
-            {
                 Graphics.CTextures.rawTextures.Add(_NPC_WIZZROBE, CMasterControl.glblContent.Load<Texture2D>(@"sprites/npc/wizzrobe"));
-            }
+
 
             _wizzrobeCount += 1;
             _direction = DIRECTION.DOWN;
-            _vanish();
+            
         }
 
         public override void update(Microsoft.Xna.Framework.GameTime gameTime)
         {
             base.update(gameTime);
 
+        }
+
+        public override void create(object sender)
+        {
+            _vanish(false);
+            base.create(sender);
         }
 
         public override void destroy(object sender)
@@ -68,14 +74,6 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
 
         protected override void cleanUp()
         {
-            Graphics.CTextures.textures.Remove(_WIZZROBE_ATTACK_DOWN);
-            Graphics.CTextures.textures.Remove(_WIZZROBE_ATTACK_LEFT);
-            Graphics.CTextures.textures.Remove(_WIZZROBE_ATTACK_UP);
-            Graphics.CTextures.textures.Remove(_WIZZROBE_ATTACK_RIGHT);
-            Graphics.CTextures.textures.Remove(_WIZZROBE_IDLE_DOWN);
-            Graphics.CTextures.textures.Remove(_WIZZROBE_IDLE_LEFT);
-            Graphics.CTextures.textures.Remove(_WIZZROBE_IDLE_RIGHT);
-            Graphics.CTextures.textures.Remove(_WIZZROBE_IDLE_UP);
             Graphics.CTextures.rawTextures.Remove(_NPC_WIZZROBE);
         }
 
@@ -83,9 +81,7 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
         {
             base.timer0(sender);
 
-            //go into attack state
-            startTimer2(_ATTACK_TIME);
-            _attack();
+            _vanish();
         }
 
         public override void timer1(object sender)
@@ -102,33 +98,35 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
 
         private void _appear()
         {
-            Graphics.CEffects.createEffect(Graphics.CEffects.SMOKE_POOF, _position);
+            Graphics.CEffects.createEffect(Graphics.CEffects.SMOKE_POOF, new Vector2(_position.X - 13, _position.Y - 5));
             _state = ACTOR_STATES.IDLE;
             startTimer0(_IDLE_TIME);
 
             switch (_direction)
             {
                 case DIRECTION.DOWN:
-                    swapImage(_WIZZROBE_IDLE_DOWN);
+                    swapImage(_IDLE_DOWN);
                     break;
 
                 case DIRECTION.UP:
-                    swapImage(_WIZZROBE_IDLE_UP);
+                    swapImage(_IDLE_UP);
                     break;
 
                 case DIRECTION.LEFT:
-                    swapImage(_WIZZROBE_IDLE_LEFT);
+                    swapImage(_IDLE_LEFT);
                     break;
 
                 case DIRECTION.RIGHT:
-                    swapImage(_WIZZROBE_IDLE_RIGHT);
+                    swapImage(_IDLE_RIGHT);
                     break;
             }
         }
 
-        private void _vanish()
+        private void _vanish(bool showEffect = true)
         {
-            Graphics.CEffects.createEffect(Graphics.CEffects.SMOKE_POOF, _position);
+            if (showEffect)
+                Graphics.CEffects.createEffect(Graphics.CEffects.SMOKE_POOF, new Vector2(_position.X - 13, _position.Y - 5));
+
             _state = ACTOR_STATES.INVISIBLE;
 
             Random rand = new Random();
