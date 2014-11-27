@@ -143,3 +143,5 @@ G:\ZFGC3\KoT\mono\King of Thieves-mono\King of Thieves\obj\x86\Debug\King of Thi
 G:\ZFGC3\KoT\mono\King of Thieves-mono\King of Thieves\bin\WindowsGL\Debug\Content\hud\buttons.xnb
 G:\ZFGC3\KoT\mono\King of Thieves-mono\King of Thieves\bin\WindowsGL\Debug\Content\effects\bomb-explosion.xnb
 G:\ZFGC3\KoT\mono\King of Thieves-mono\King of Thieves\bin\WindowsGL\Debug\Content\sprites\npc\wizzrobe.xnb
+G:\ZFGC3\KoT\mono\King of Thieves-mono\King of Thieves\bin\WindowsGL\Debug\Content\sounds\environment\shock.xnb
+G:\ZFGC3\KoT\mono\King of Thieves-mono\King of Thieves\bin\WindowsGL\Debug\Content\sounds\npc\wizzrobevanish.xnb

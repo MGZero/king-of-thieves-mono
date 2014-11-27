@@ -20,7 +20,7 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
         protected readonly WIZZROBE_TYPE _type;
         private const int _IDLE_TIME = 240; //the time between appearing and attacking/dissapearing
         private readonly int[] _VANISH_TIME = {240,180,300}; //the time they are invisible for
-        private const int _ATTACK_TIME = 60; //the time for playing the attack frames
+        private const int _ATTACK_TIME = 120; //the time for playing the attack frames
         protected readonly static string _NPC_WIZZROBE = "npc:wizzrobe";
         private static int _wizzrobeCount = 0;
 
@@ -105,7 +105,6 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
         public override void timer0(object sender)
         {
             base.timer0(sender);
-
             _vanish();
         }
 
@@ -118,6 +117,12 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
         public override void timer2(object sender)
         {
             base.timer2(sender);
+            _startAttack();
+        }
+
+        public override void timer3(object sender)
+        {
+            base.timer3(sender);
             _attack();
         }
 
@@ -125,7 +130,7 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
         {
             Graphics.CEffects.createEffect(Graphics.CEffects.SMOKE_POOF, new Vector2(_position.X - 13, _position.Y - 5));
             _state = ACTOR_STATES.IDLE;
-            startTimer0(_IDLE_TIME);
+            startTimer2(_IDLE_TIME);
             Vector2 playerPos = (Vector2)Map.CMapManager.propertyGetter("player", Map.EActorProperties.POSITION);
             lookAt(playerPos);
 
@@ -163,12 +168,33 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
             CMasterControl.audioPlayer.addSfx(CMasterControl.audioPlayer.soundBank["Npc:wizzrobe:vanish"]);
         }
 
-        private void _attack()
+        private void _startAttack()
         {
             switch (_direction)
             {
+                case DIRECTION.DOWN:
+                    swapImage(_ATTACK_DOWN);
+                    break;
 
+                case DIRECTION.UP:
+                    swapImage(_ATTACK_UP);
+                    break;
+
+                case DIRECTION.LEFT:
+                    swapImage(_ATTACK_LEFT);
+                    break;
+
+                case DIRECTION.RIGHT:
+                    swapImage(_ATTACK_RIGHT);
+                    break;
             }
+            startTimer3(_ATTACK_TIME);
+            _state = ACTOR_STATES.ATTACK;
+        }
+
+        private void _attack()
+        {
+            _vanish();
         }
 
         public override void drawMe(bool useOverlay = false)

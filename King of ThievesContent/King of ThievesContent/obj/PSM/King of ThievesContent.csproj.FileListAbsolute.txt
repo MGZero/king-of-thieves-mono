@@ -113,3 +113,5 @@ G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesCon
 G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\obj\PSM\King of ThievesContent.csprojResolveAssemblyReference.cache
 G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\effects\bomb-explosion.xnb
 G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sprites\npc\wizzrobe.xnb
+G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\environment\shock.xnb
+G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\npc\wizzrobevanish.xnb

@@ -105,6 +105,9 @@ namespace King_of_Thieves.Actors
         public event actorEventHandler onTimer0;
         public event actorEventHandler onTimer1;
         public event actorEventHandler onTimer2;
+        public event actorEventHandler onTimer3;
+        public event actorEventHandler onTimer4;
+        public event actorEventHandler onTimer5;
         public event actorEventHandler onMouseClick;
         public event actorEventHandler onClick;
         public event actorEventHandler onTap;
@@ -119,6 +122,9 @@ namespace King_of_Thieves.Actors
         public virtual void timer0(object sender)  { }
         public virtual void timer1(object sender) { }
         public virtual void timer2(object sender) { }
+        public virtual void timer3(object sender) { }
+        public virtual void timer4(object sender) { }
+        public virtual void timer5(object sender) { }
         public virtual void mouseClick(object sender) { }
         public virtual void click(object sender) { }
         public virtual void tap(object sender) { }
@@ -138,7 +144,9 @@ namespace King_of_Thieves.Actors
         private int _timer0 = -1;
         private int _timer1 = -1;
         private int _timer2 = -1;
-        
+        private int _timer3 = -1;
+        private int _timer4 = -1;
+        private int _timer5 = -1;
 
         public CActor()
             
@@ -156,6 +164,9 @@ namespace King_of_Thieves.Actors
             onTimer0 += new actorEventHandler(timer0);
             onTimer1 += new actorEventHandler(timer1);
             onTimer2 += new actorEventHandler(timer2);
+            onTimer3 += new actorEventHandler(timer3);
+            onTimer4 += new actorEventHandler(timer4);
+            onTimer5 += new actorEventHandler(timer5);
 
             _name = name;
             _collidables = new List<Type>();
@@ -241,6 +252,21 @@ namespace King_of_Thieves.Actors
         public void startTimer2(int ticks)
         {
             _timer2 = ticks;
+        }
+
+        public void startTimer3(int ticks)
+        {
+            _timer3 = ticks;
+        }
+
+        public void startTimer4(int ticks)
+        {
+            _timer4 = ticks;
+        }
+
+        public void startTimer5(int ticks)
+        {
+            _timer5 = ticks;
         }
 
         //overload this and call the base to process your own parameters
@@ -464,6 +490,40 @@ namespace King_of_Thieves.Actors
                         onTimer2(this);
                     }
                 }
+
+                if (_timer3 >= 0)
+                {
+                    _timer3--;
+
+                    if (_timer3 <= 0)
+                    {
+                        _timer3 = -1;
+                        onTimer3(this);
+                    }
+                }
+
+                if (_timer4 >= 0)
+                {
+                    _timer4--;
+
+                    if (_timer4 <= 0)
+                    {
+                        _timer4 = -1;
+                        onTimer4(this);
+                    }
+                }
+
+                if (_timer5 >= 0)
+                {
+                    _timer5--;
+
+                    if (_timer5 <= 0)
+                    {
+                        _timer5 = -1;
+                        onTimer5(this);
+                    }
+                }
+
 
                 foreach (KeyValuePair<uint, CActor> ID in _userEventsToFire)
                 {
