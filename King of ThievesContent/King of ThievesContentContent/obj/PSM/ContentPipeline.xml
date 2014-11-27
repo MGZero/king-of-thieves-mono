@@ -99,7 +99,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\Player.xnb</Output>
-      <Time>2014-11-02T21:36:49.8232862-05:00</Time>
+      <Time>2014-11-24T22:40:47.1984429-05:00</Time>
     </Item>
     <Item>
       <Source>PlayerIdleDown.png</Source>
@@ -468,7 +468,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\hud\buttons.xnb</Output>
-      <Time>2014-11-02T22:27:34.0634068-05:00</Time>
+      <Time>2014-11-24T22:40:47.2014431-05:00</Time>
     </Item>
     <Item>
       <Source>effects\bomb-explosion.png</Source>
@@ -477,7 +477,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\effects\bomb-explosion.xnb</Output>
-      <Time>2014-11-03T21:39:38.4970401-05:00</Time>
+      <Time>2014-11-24T22:40:47.199443-05:00</Time>
     </Item>
     <Item>
       <Source>sprites\npc\wizzrobe.png</Source>
@@ -486,7 +486,25 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sprites\npc\wizzrobe.xnb</Output>
-      <Time>2014-11-03T22:37:25.4383378-05:00</Time>
+      <Time>2014-11-24T22:40:47.2144439-05:00</Time>
+    </Item>
+    <Item>
+      <Source>sounds\environment\shock.wav</Source>
+      <Name>sounds\environment\shock</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\environment\shock.xnb</Output>
+      <Time>2014-11-27T00:48:02.0173692-05:00</Time>
+    </Item>
+    <Item>
+      <Source>sounds\npc\wizzrobevanish.wav</Source>
+      <Name>sounds\npc\wizzrobevanish</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\npc\wizzrobevanish.xnb</Output>
+      <Time>2014-11-27T00:50:17.4681165-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

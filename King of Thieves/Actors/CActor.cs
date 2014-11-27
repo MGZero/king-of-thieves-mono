@@ -68,7 +68,7 @@ namespace King_of_Thieves.Actors
         protected DIRECTION _direction = DIRECTION.UP;
         protected Boolean _moving = false; //used for prioritized movement
         private int _componentAddress = 0;
-        protected Dictionary<uint, userEventHandler> _userEvents;
+        protected Dictionary<uint, actorEventHandler> _userEvents;
         protected Dictionary<uint, CActor> _userEventsToFire;
         protected ACTOR_STATES _state = ACTOR_STATES.IDLE;
         public Graphics.CSprite image;
@@ -94,20 +94,20 @@ namespace King_of_Thieves.Actors
 
 
         //event handlers will be added here
-        public event createHandler onCreate;
-        public event destroyHandler onDestroy;
-        public event keyDownHandler onKeyDown;
-        public event frameHandler onFrame;
-        public event drawHandler onDraw;
-        public event keyReleaseHandler onKeyRelease;
+        public event actorEventHandler onCreate;
+        public event actorEventHandler onDestroy;
+        public event actorEventHandler onKeyDown;
+        public event actorEventHandler onFrame;
+        public event actorEventHandler onDraw;
+        public event actorEventHandler onKeyRelease;
         public event collideHandler onCollide;
-        public event animationEndHandler onAnimationEnd;
-        public event timerHandler onTimer0;
-        public event timerHandler onTimer1;
-        public event timerHandler onTimer2;
-        public event mouseLeftClickHandler onMouseClick;
-        public event clickHandler onClick;
-        public event tapHandler onTap;
+        public event actorEventHandler onAnimationEnd;
+        public event actorEventHandler onTimer0;
+        public event actorEventHandler onTimer1;
+        public event actorEventHandler onTimer2;
+        public event actorEventHandler onMouseClick;
+        public event actorEventHandler onClick;
+        public event actorEventHandler onTap;
 
         public virtual void create(object sender) { }
         public virtual void keyDown(object sender) { }
@@ -143,19 +143,19 @@ namespace King_of_Thieves.Actors
         public CActor()
             
         {
-            onCreate += new createHandler(create);
-            onDestroy += new destroyHandler(destroy);
-            onKeyDown += new keyDownHandler(keyDown);
-            onKeyRelease += new keyReleaseHandler(keyRelease);
-            onFrame += new frameHandler(frame);
-            onDraw += new drawHandler(draw);
-            onAnimationEnd += new animationEndHandler(animationEnd);
+            onCreate += new actorEventHandler(create);
+            onDestroy += new actorEventHandler(destroy);
+            onKeyDown += new actorEventHandler(keyDown);
+            onKeyRelease += new actorEventHandler(keyRelease);
+            onFrame += new actorEventHandler(frame);
+            onDraw += new actorEventHandler(draw);
+            onAnimationEnd += new actorEventHandler(animationEnd);
             onCollide += new collideHandler(collide);
-            onMouseClick += new mouseLeftClickHandler(mouseClick);
-            onTap += new tapHandler(tap);
-            onTimer0 += new timerHandler(timer0);
-            onTimer1 += new timerHandler(timer1);
-            onTimer2 += new timerHandler(timer2);
+            onMouseClick += new actorEventHandler(mouseClick);
+            onTap += new actorEventHandler(tap);
+            onTimer0 += new actorEventHandler(timer0);
+            onTimer1 += new actorEventHandler(timer1);
+            onTimer2 += new actorEventHandler(timer2);
 
             _name = name;
             _collidables = new List<Type>();
@@ -182,12 +182,12 @@ namespace King_of_Thieves.Actors
 
         ~CActor()
         {
-            onCreate -= new createHandler(create);
-            onDestroy -= new destroyHandler(destroy);
-            onKeyDown -= new keyDownHandler(keyDown);
-            onFrame -= new frameHandler(frame);
-            onKeyRelease -= new keyReleaseHandler(keyRelease);
-            onDraw -= new drawHandler(draw);
+            onCreate -= new actorEventHandler(create);
+            onDestroy -= new actorEventHandler(destroy);
+            onKeyDown -= new actorEventHandler(keyDown);
+            onFrame -= new actorEventHandler(frame);
+            onKeyRelease -= new actorEventHandler(keyRelease);
+            onDraw -= new actorEventHandler(draw);
         }
 
         public string dataType
@@ -201,6 +201,8 @@ namespace King_of_Thieves.Actors
         public void lookAt(Vector2 position)
         {
             double angle = MathExt.MathExt.angle(_position, position);
+            if (angle < 0)
+                angle += 360;
 
             if (angle >= 225 && angle <= 315)
             {
@@ -335,7 +337,7 @@ namespace King_of_Thieves.Actors
 
         protected virtual void _registerUserEvents()
         {
-            _userEvents = new Dictionary<uint, userEventHandler>();
+            _userEvents = new Dictionary<uint, actorEventHandler>();
             _userEventsToFire = new Dictionary<uint, CActor>();
         }
 

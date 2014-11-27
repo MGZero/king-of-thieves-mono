@@ -51,6 +51,31 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
         {
             base.update(gameTime);
 
+            if (_state == ACTOR_STATES.IDLE)
+            {
+                Vector2 playerPos = (Vector2)Map.CMapManager.propertyGetter("player", Map.EActorProperties.POSITION);
+                lookAt(playerPos);
+
+                switch (_direction)
+                {
+                    case DIRECTION.DOWN:
+                        swapImage(_IDLE_DOWN);
+                        break;
+
+                    case DIRECTION.UP:
+                        swapImage(_IDLE_UP);
+                        break;
+
+                    case DIRECTION.LEFT:
+                        swapImage(_IDLE_LEFT);
+                        break;
+
+                    case DIRECTION.RIGHT:
+                        swapImage(_IDLE_RIGHT);
+                        break;
+                }
+            }
+
         }
 
         public override void create(object sender)
@@ -101,6 +126,8 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
             Graphics.CEffects.createEffect(Graphics.CEffects.SMOKE_POOF, new Vector2(_position.X - 13, _position.Y - 5));
             _state = ACTOR_STATES.IDLE;
             startTimer0(_IDLE_TIME);
+            Vector2 playerPos = (Vector2)Map.CMapManager.propertyGetter("player", Map.EActorProperties.POSITION);
+            lookAt(playerPos);
 
             switch (_direction)
             {
@@ -120,6 +147,7 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
                     swapImage(_IDLE_RIGHT);
                     break;
             }
+            CMasterControl.audioPlayer.addSfx(CMasterControl.audioPlayer.soundBank["Npc:wizzrobe:vanish"]);
         }
 
         private void _vanish(bool showEffect = true)
@@ -132,6 +160,7 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
             Random rand = new Random();
             startTimer1(_VANISH_TIME[rand.Next(2)]);
             rand = null;
+            CMasterControl.audioPlayer.addSfx(CMasterControl.audioPlayer.soundBank["Npc:wizzrobe:vanish"]);
         }
 
         private void _attack()

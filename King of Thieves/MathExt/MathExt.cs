@@ -15,7 +15,7 @@ namespace King_of_Thieves.MathExt
 
         public static double angle(Vector2 point1, Vector2 point2)
         {
-            return Math.Atan2(point2.Y - point1.Y, point2.X - point1.X);
+            return Math.Atan2(point1.Y - point2.Y, point2.X - point1.X) * (180/Math.PI);
         }
     }
 }

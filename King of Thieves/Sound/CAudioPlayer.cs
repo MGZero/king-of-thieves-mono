@@ -48,8 +48,7 @@ namespace King_of_Thieves.Sound
             soundBank.Add("Player:Electrocute", new CSound(CMasterControl.glblContent.Load<SoundEffect>("sounds/link/shocked")));
             soundBank.Add("Player:Hurt1", new CSound(CMasterControl.glblContent.Load<SoundEffect>("sounds/link/hurt1")));
             soundBank.Add("Items:Decor:ItemSmash", new CSound(CMasterControl.glblContent.Load<SoundEffect>("sounds/MC_Shatter")));
-            soundBank.Add("Background:Nature:Rooster", new CSound(CMasterControl.glblContent.Load<SoundEffect>("sounds/rooster")));
-            soundBank.Add("Background:Nature:Wolf", new CSound(CMasterControl.glblContent.Load<SoundEffect>("sounds/wolf")));
+            
             
             //text
             soundBank.Add("Text:textBoxContinue", new CSound(CMasterControl.glblContent.Load<SoundEffect>("sounds/text/TextBoxContinue")));
@@ -58,6 +57,14 @@ namespace King_of_Thieves.Sound
             //hud
             soundBank.Add("HUD:health:heartGet", new CSound(CMasterControl.glblContent.Load<SoundEffect>("sounds/health/lttp_heart")));
             soundBank.Add("HUD:health:healthBeep", new CSound(CMasterControl.glblContent.Load<SoundEffect>("sounds/health/Low_Health_Beep")));
+
+            //npcs
+            soundBank.Add("Npc:wizzrobe:vanish", new CSound(CMasterControl.glblContent.Load<SoundEffect>("sounds/npc/wizzrobevanish")));
+
+            //background sfx
+            soundBank.Add("Background:Nature:Rooster", new CSound(CMasterControl.glblContent.Load<SoundEffect>("sounds/rooster")));
+            soundBank.Add("Background:Nature:Wolf", new CSound(CMasterControl.glblContent.Load<SoundEffect>("sounds/wolf")));
+            soundBank.Add("Background:Shock", new CSound(CMasterControl.glblContent.Load<SoundEffect>("sounds/environment/shock")));
         }
 
         public void stop()
@@ -120,9 +127,15 @@ namespace King_of_Thieves.Sound
                     MediaPlayer.IsRepeating = file.loop;
                     MediaPlayer.Play(_song.song);
                 }
+                file.sfx.Dispose();
+                file = null;
             }
             else
+            {
+                file.sfx.Dispose();
+                file = null;
                 throw new FormatException("The CSound passed did not contain any valid audio information.");
+            }
         }
     }
 }
