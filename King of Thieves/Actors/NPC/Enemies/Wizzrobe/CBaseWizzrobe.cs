@@ -216,7 +216,7 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
 
         private void _attack()
         {
-            Map.CMapManager.addActorToComponent(new Actors.Projectiles.CEnergyWave(_direction, new Vector2(0,-1)),componentAddress);
+            Map.CMapManager.addActorToComponent(new Actors.Projectiles.CEnergyWave(_direction, new Vector2(0,5), _position),componentAddress);
             _vanish();
         }
 

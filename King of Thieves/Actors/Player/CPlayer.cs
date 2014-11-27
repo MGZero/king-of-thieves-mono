@@ -116,6 +116,15 @@ namespace King_of_Thieves.Actors.Player
                         _acceptInput = false;
                         solidCollide(collider, true);
                     }
+                    else if (collider is Projectiles.CEnergyWave)
+                    {
+                        //start a moveback timer
+                        //change state to knockBack
+                        startTimer0(10);
+                        _state = ACTOR_STATES.KNOCKBACK;
+                        _acceptInput = false;
+                        solidCollide(collider, true);
+                    }
                 }
             }
         }
@@ -567,6 +576,7 @@ namespace King_of_Thieves.Actors.Player
             _collidables.Add(typeof(NPC.Enemies.Keese.CKeese));
             _collidables.Add(typeof(NPC.Enemies.Keese.CKeeseShadow));
             _collidables.Add(typeof(NPC.Enemies.Keese.CKeeseThunder));
+            _collidables.Add(typeof(Projectiles.CEnergyWave));
         }
 
         public override void shock()

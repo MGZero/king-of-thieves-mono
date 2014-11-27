@@ -13,17 +13,29 @@ namespace King_of_Thieves.Actors.Projectiles
         protected static readonly string PROJ_UP = "projUp";
         protected static readonly string PROJ_DOWN = "projDown";
 
-        public CProjectile(DIRECTION direction, Vector2 velocity) :
+        public CProjectile(DIRECTION direction, Vector2 velocity, Vector2 position) :
             base()
         {
             _direction = direction;
             _velocity = velocity;
+            _position = position;
+        }
+
+        public override void collide(object sender, CActor collider)
+        {
+            _killMe = true;
+            CMasterControl.healthController.modifyHp(-2);
         }
 
         public override void update(GameTime gameTime)
         {
             base.update(gameTime);
             _position += _velocity;
+        }
+
+        protected override void _addCollidables()
+        {
+            _collidables.Add(typeof(Player.CPlayer));
         }
 
         protected void shoot()
