@@ -242,6 +242,19 @@ namespace King_of_Thieves.Map
                 layer.updateLayer(gameTime);
         }
 
+        public CComponent queryComponentRegistry(int id)
+        {
+            var query = from component in _componentRegistry
+                        where component.getAddress() == id
+                        select component;
+            CComponent[] result = query.ToArray();
+
+            if (result.Length == 0)
+                return null;
+
+            return query.ToArray()[0];
+        }
+
         public Actors.CActor[] queryActorRegistry(Type type, int layer)
         {
             var query = from actor in _actorRegistry
@@ -278,6 +291,17 @@ namespace King_of_Thieves.Map
         {
             foreach (CComponent comp in _componentRegistry)
                 CMasterControl.commNet.Add(comp.address, new List<CActorPacket>());
+        }
+
+        public void addToActorRegistry(CActor actor)
+        {
+            _actorRegistry.Add(actor);
+        }
+
+        public void addActorToComponent(CActor actor, int componentId)
+        {
+            queryComponentRegistry(componentId).addActor(actor, actor.name);
+            addToActorRegistry(actor);
         }
     }
 }

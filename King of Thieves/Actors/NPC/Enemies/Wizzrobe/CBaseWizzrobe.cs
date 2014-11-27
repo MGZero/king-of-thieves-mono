@@ -23,6 +23,8 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
         private const int _ATTACK_TIME = 120; //the time for playing the attack frames
         protected readonly static string _NPC_WIZZROBE = "npc:wizzrobe";
         private static int _wizzrobeCount = 0;
+        private static Vector2 _energyBallPos1 = new Vector2();
+        private static Vector2 _energyBallPos2 = new Vector2();
 
         protected readonly static string _IDLE_DOWN = "idleDown";
         protected readonly static string _ATTACK_DOWN = "attackDown";
@@ -32,6 +34,10 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
         protected readonly static string _ATTACK_RIGHT = "attackRight";
         protected readonly static string _IDLE_UP = "idleUp";
         protected readonly static string _ATTACK_UP = "attackUp";
+        protected readonly static string _BEAM_DOWN = "beamDown";
+        protected readonly static string _BEAM_UP = "beamUp";
+        protected readonly static string _BEAM_LEFT = "beamLeft";
+        protected readonly static string _BEAM_RIGHT = "beamRight";
 
         public CBaseWizzrobe(WIZZROBE_TYPE type, params dropRate[] drops)
             : base(drops)
@@ -128,7 +134,7 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
 
         private void _appear()
         {
-            Graphics.CEffects.createEffect(Graphics.CEffects.SMOKE_POOF, new Vector2(_position.X - 13, _position.Y - 5));
+            
             _state = ACTOR_STATES.IDLE;
             startTimer2(_IDLE_TIME);
             Vector2 playerPos = (Vector2)Map.CMapManager.propertyGetter("player", Map.EActorProperties.POSITION);
@@ -153,6 +159,7 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
                     break;
             }
             CMasterControl.audioPlayer.addSfx(CMasterControl.audioPlayer.soundBank["Npc:wizzrobe:vanish"]);
+            Graphics.CEffects.createEffect(Graphics.CEffects.SMOKE_POOF, new Vector2(_position.X - 13, _position.Y - 5));
         }
 
         private void _vanish(bool showEffect = true)
@@ -170,30 +177,46 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
 
         private void _startAttack()
         {
+            
+            
             switch (_direction)
             {
                 case DIRECTION.DOWN:
+                    _energyBallPos1.X = _position.X - 10;
+                    _energyBallPos1.Y = _position.Y - 5;
+
+                    _energyBallPos2.X = _position.X + 10;
+                    _energyBallPos2.Y = _position.Y - 5;
                     swapImage(_ATTACK_DOWN);
                     break;
 
                 case DIRECTION.UP:
+                    _energyBallPos1.X = _position.X - 13;
+                    _energyBallPos1.Y = _position.Y;
                     swapImage(_ATTACK_UP);
                     break;
 
                 case DIRECTION.LEFT:
+                    _energyBallPos1.X = _position.X - 13;
+                    _energyBallPos1.Y = _position.Y;
                     swapImage(_ATTACK_LEFT);
                     break;
 
                 case DIRECTION.RIGHT:
+                    _energyBallPos1.X = _position.X - 13;
+                    _energyBallPos1.Y = _position.Y;
                     swapImage(_ATTACK_RIGHT);
                     break;
             }
+            Graphics.CEffects.createEffect(Graphics.CTextures.EFFECT_ENERGY_BALL_SMALL, _energyBallPos1, 9);
+            Graphics.CEffects.createEffect(Graphics.CTextures.EFFECT_ENERGY_BALL_SMALL, _energyBallPos2, 9);
             startTimer3(_ATTACK_TIME);
             _state = ACTOR_STATES.ATTACK;
         }
 
         private void _attack()
         {
+            Map.CMapManager.addActorToComponent(new Actors.Projectiles.CEnergyWave(_direction, new Vector2(0,-1)),componentAddress);
             _vanish();
         }
 

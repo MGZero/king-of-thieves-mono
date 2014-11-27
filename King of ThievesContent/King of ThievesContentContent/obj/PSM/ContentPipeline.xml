@@ -506,6 +506,15 @@
       <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\npc\wizzrobevanish.xnb</Output>
       <Time>2014-11-27T00:50:17.4681165-05:00</Time>
     </Item>
+    <Item>
+      <Source>effects\various-effects.png</Source>
+      <Name>effects\various-effects</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\effects\various-effects.xnb</Output>
+      <Time>2014-11-27T14:34:10.3601136-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

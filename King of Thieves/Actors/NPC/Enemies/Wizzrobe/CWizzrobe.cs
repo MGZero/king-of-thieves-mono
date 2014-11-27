@@ -44,6 +44,8 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
             _imageIndex.Add(_ATTACK_UP, new Graphics.CSprite(_WIZZROBE_ATTACK_UP));
 
             _normalWizzrobeCount += 1;
+
+            
         }
 
         protected override void cleanUp()

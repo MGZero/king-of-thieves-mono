@@ -16,6 +16,19 @@ namespace King_of_Thieves.Graphics
         private static RenderTarget2D _tileMapGen = null;
         private static SpriteBatch _tileBatch = null;
 
+        //==================sprite constants======================
+        //flesh these out over time.  It's better than constantly creating string instances everytime we want to swap a sprite state.
+        //namespaces
+        public static string EFFECTS = "effects:";
+        public static string PLAYER = "Player:";
+
+        //actual constants
+        public static string EFFECT_ENERGY_BALL_SMALL = EFFECTS + "energyBallSmall";
+        public static string EFFECT_ENERGY_WAVE_SMALL = EFFECTS + "energyWaveSmall";
+
+       
+
+
         public static void init(ContentManager content)
         {
             _content = content;
@@ -115,6 +128,10 @@ namespace King_of_Thieves.Graphics
             //effects
             textures.Add("effects:explosion", new CTextureAtlas("effects:explosion", 64, 64, 0, "0:0", "10:0", 10));
             textures.Add("effects:smokePoof", new CTextureAtlas("effects:explosion", 64, 64, 0, "2:0", "10:0", 10));
+            textures.Add(EFFECT_ENERGY_BALL_SMALL, new CTextureAtlas("effects:various", 32, 32, 0, "0:0", "1:0", 5));
+
+            //projectiles
+            textures.Add(EFFECT_ENERGY_WAVE_SMALL, new CTextureAtlas("effects:various", 32, 32, 0, "2:0", "2:0", 0));
 
             //HUD
             textures.Add("HUD:text:textBox", new CTextureAtlas("hud", 303, 74, 0, "0:0", "0:0", 0));
@@ -161,6 +178,8 @@ namespace King_of_Thieves.Graphics
 
             //effects
             rawTextures.Add("effects:explosion", _content.Load<Texture2D>(@"effects/bomb-explosion"));
+            rawTextures.Add("effects:various", _content.Load<Texture2D>(@"effects/various-effects"));
+            
 
             //hud
             rawTextures.Add("hud", _content.Load<Texture2D>("hud/textbox2"));

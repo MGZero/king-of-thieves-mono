@@ -28,7 +28,7 @@ namespace King_of_Thieves.Graphics
 
         private static List<CEffectWrapper> _drawList = new List<CEffectWrapper>();
 
-        public static void createEffect(string effect, Vector2 position, int duration = 0)
+        public static void createEffect(string effect, Vector2 position, int duration = -1)
         {
             CSprite addToDrawList = new CSprite(effect, false, false, null, true);
             _drawList.Add(new CEffectWrapper(addToDrawList,position,duration));
@@ -42,6 +42,14 @@ namespace King_of_Thieves.Graphics
                 CEffectWrapper effect = _drawList[i];
 
                 if (effect.sprite.draw((int)effect.position.X, (int)effect.position.Y))
+                {
+                    if (effect.duration < 0)
+                        _drawList.Remove(effect);
+                    effect.duration -= 1;
+                    continue;
+                }
+
+                if (effect.duration == 0)
                     _drawList.Remove(effect);
             }
         }

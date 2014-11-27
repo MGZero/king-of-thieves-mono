@@ -108,5 +108,10 @@ namespace King_of_Thieves.Map
         {
             _currentMap.removeComponent(component, component.layer);
         }
+
+        public static void addActorToComponent(Actors.CActor actor, int componentAddress)
+        {
+            _currentMap.addActorToComponent(actor, componentAddress);
+        }
     }
 }
