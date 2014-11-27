@@ -13,14 +13,17 @@ namespace King_of_Thieves.Actors.Projectiles
         {
             name = "energyWaveSmall";
             _imageIndex.Add(PROJ_DOWN, new Graphics.CSprite(Graphics.CTextures.EFFECT_ENERGY_WAVE_SMALL));
-            _imageIndex.Add(PROJ_LEFT, new Graphics.CSprite(Graphics.CTextures.EFFECT_ENERGY_WAVE_SMALL));
-            _imageIndex.Add(PROJ_RIGHT, new Graphics.CSprite(Graphics.CTextures.EFFECT_ENERGY_WAVE_SMALL));
+            _imageIndex.Add(PROJ_LEFT, new Graphics.CSprite(Graphics.CTextures.EFFECT_ENERGY_WAVE_SMALL_LEFT));
+            _imageIndex.Add(PROJ_RIGHT, new Graphics.CSprite(Graphics.CTextures.EFFECT_ENERGY_WAVE_SMALL_LEFT,true,false));
             _imageIndex.Add(PROJ_UP, new Graphics.CSprite(Graphics.CTextures.EFFECT_ENERGY_WAVE_SMALL,false,true));
 
-            _hitBox = new Collision.CHitBox(this, 6, 9, 14, 10);
+            if (_direction == DIRECTION.UP || _direction == DIRECTION.DOWN)
+                _hitBox = new Collision.CHitBox(this, 6, 9, 14, 10);
+            else
+                _hitBox = new Collision.CHitBox(this, 6, 9, 10, 14);
 
             shoot();
-            startTimer0(120);
+            startTimer0(60);
         }
 
         public override void timer0(object sender)

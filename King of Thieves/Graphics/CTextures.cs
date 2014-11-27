@@ -25,6 +25,7 @@ namespace King_of_Thieves.Graphics
         //actual constants
         public static string EFFECT_ENERGY_BALL_SMALL = EFFECTS + "energyBallSmall";
         public static string EFFECT_ENERGY_WAVE_SMALL = EFFECTS + "energyWaveSmall";
+        public static string EFFECT_ENERGY_WAVE_SMALL_LEFT = EFFECTS + "energyWaveSmallLeft";
 
        
 
@@ -132,6 +133,7 @@ namespace King_of_Thieves.Graphics
 
             //projectiles
             textures.Add(EFFECT_ENERGY_WAVE_SMALL, new CTextureAtlas("effects:various", 32, 32, 0, "2:0", "2:0", 0));
+            textures.Add(EFFECT_ENERGY_WAVE_SMALL_LEFT, new CTextureAtlas("effects:various", 32, 32, 0, "3:0", "3:0", 0));
 
             //HUD
             textures.Add("HUD:text:textBox", new CTextureAtlas("hud", 303, 74, 0, "0:0", "0:0", 0));
