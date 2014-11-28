@@ -78,10 +78,13 @@
     <Compile Include="Actors\NPC\Enemies\Keese\CKeeseShadow.cs" />
     <Compile Include="Actors\NPC\Enemies\Keese\CKeeseThunder.cs" />
     <Compile Include="Actors\NPC\Enemies\Wizzrobe\CBaseWizzrobe.cs" />
+    <Compile Include="Actors\NPC\Enemies\Wizzrobe\CIceWizzrobe.cs" />
     <Compile Include="Actors\NPC\Enemies\Wizzrobe\CWizzrobe.cs" />
     <Compile Include="Actors\NPC\Other\Maple\CMaple.cs" />
     <Compile Include="Actors\Player\CPlayer.cs" />
     <Compile Include="Actors\Projectiles\CEnergyWave.cs" />
+    <Compile Include="Actors\Projectiles\CFireBall.cs" />
+    <Compile Include="Actors\Projectiles\CIceBall.cs" />
     <Compile Include="Actors\Projectiles\CProjectile.cs" />
     <Compile Include="Actors\World\Water\CBaseWater.cs" />
     <Compile Include="Actors\World\Water\CDeepWater.cs" />

@@ -15,7 +15,7 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
         LIGHTNING
     }
 
-    class CBaseWizzrobe : CBaseEnemy
+    abstract class CBaseWizzrobe : CBaseEnemy
     {
         protected readonly WIZZROBE_TYPE _type;
         private const int _IDLE_TIME = 240; //the time between appearing and attacking/dissapearing
@@ -26,6 +26,18 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
         private static Vector2 _energyBallPos1 = new Vector2();
         private static Vector2 _energyBallPos2 = new Vector2();
 
+        //texture atlas constants
+        protected readonly static string _SPRITE_NAMESPACE = "Npc:wizzrobe";
+        protected readonly static string _WIZZROBE_IDLE_DOWN = _SPRITE_NAMESPACE + ":idleDown";
+        protected readonly static string _WIZZROBE_ATTACK_DOWN = _SPRITE_NAMESPACE + ":attackDown";
+        protected readonly static string _WIZZROBE_IDLE_LEFT = _SPRITE_NAMESPACE + ":idleLeft";
+        protected readonly static string _WIZZROBE_ATTACK_LEFT = _SPRITE_NAMESPACE + ":attackLeft";
+        protected readonly static string _WIZZROBE_IDLE_RIGHT = _SPRITE_NAMESPACE + ":idleRight";
+        protected readonly static string _WIZZROBE_ATTACK_RIGHT = _SPRITE_NAMESPACE + ":attackRight";
+        protected readonly static string _WIZZROBE_IDLE_UP = _SPRITE_NAMESPACE + ":idleUp";
+        protected readonly static string _WIZZROBE_ATTACK_UP = _SPRITE_NAMESPACE + ":attackUp";
+
+        //image index constants
         protected readonly static string _IDLE_DOWN = "idleDown";
         protected readonly static string _ATTACK_DOWN = "attackDown";
         protected readonly static string _IDLE_LEFT = "idleLeft";
@@ -226,30 +238,11 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
 
         private void _attack()
         {
-            Vector2 projectileVelo = Vector2.Zero;
-
-            switch (_direction)
-            {
-                case DIRECTION.DOWN:
-                    projectileVelo.Y = 5;
-                    break;
-
-                case DIRECTION.UP:
-                    projectileVelo.Y = -5;
-                    break;
-
-                case DIRECTION.RIGHT:
-                    projectileVelo.X = 5;
-                    break;
-
-                case DIRECTION.LEFT:
-                    projectileVelo.X = -5;
-                    break;
-            }
-
-            Map.CMapManager.addActorToComponent(new Actors.Projectiles.CEnergyWave(_direction, projectileVelo, _position),componentAddress);
+            _fireProjectile();
             _vanish();
         }
+
+        protected abstract void _fireProjectile();
 
         public override void drawMe(bool useOverlay = false)
         {

@@ -21,12 +21,6 @@ namespace King_of_Thieves.Actors.Projectiles
             _position = position;
         }
 
-        public override void collide(object sender, CActor collider)
-        {
-            _killMe = true;
-            CMasterControl.healthController.modifyHp(-2);
-        }
-
         public override void update(GameTime gameTime)
         {
             base.update(gameTime);
@@ -38,7 +32,7 @@ namespace King_of_Thieves.Actors.Projectiles
             _collidables.Add(typeof(Player.CPlayer));
         }
 
-        protected void shoot()
+        protected virtual void shoot()
         {
             switch (_direction)
             {

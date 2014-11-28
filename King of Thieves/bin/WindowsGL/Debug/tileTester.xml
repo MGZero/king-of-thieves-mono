@@ -86,7 +86,7 @@
 			</component>
 			<component>
 				<actors>
-					<actor name = "wizzRobeTest" type="King_of_Thieves.Actors.NPC.Enemies.Wizzrobe.CWizzrobe" coordinates = "50:100"></actor>
+					<actor name = "wizzRobeTest" type="King_of_Thieves.Actors.NPC.Enemies.Wizzrobe.CIceWizzrobe" coordinates = "50:100"></actor>
 				</actors>
 			</component>
 		</components>

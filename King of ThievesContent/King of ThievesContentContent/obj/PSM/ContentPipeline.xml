@@ -495,7 +495,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\environment\shock.xnb</Output>
-      <Time>2014-11-27T00:48:02.0173692-05:00</Time>
+      <Time>2014-11-27T18:35:08.8670929-05:00</Time>
     </Item>
     <Item>
       <Source>sounds\npc\wizzrobevanish.wav</Source>
@@ -504,7 +504,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sounds\npc\wizzrobevanish.xnb</Output>
-      <Time>2014-11-27T00:50:17.4681165-05:00</Time>
+      <Time>2014-11-27T18:35:08.8790935-05:00</Time>
     </Item>
     <Item>
       <Source>effects\various-effects.png</Source>
@@ -513,7 +513,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\effects\various-effects.xnb</Output>
-      <Time>2014-11-27T17:57:22.3744569-05:00</Time>
+      <Time>2014-11-28T12:50:14.8167495-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

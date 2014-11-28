@@ -25,7 +25,10 @@ namespace King_of_Thieves.Graphics
         //actual constants
         public static string EFFECT_ENERGY_BALL_SMALL = EFFECTS + "energyBallSmall";
         public static string EFFECT_ENERGY_WAVE_SMALL = EFFECTS + "energyWaveSmall";
-        public static string EFFECT_ENERGY_WAVE_SMALL_LEFT = EFFECTS + "energyWaveSmallLeft";
+        public static string EFFECT_ENERGY_WAVE_SMALL_LEFT = EFFECT_ENERGY_WAVE_SMALL + "Left";
+        public static string EFFECT_ICE_BALL_SMALL = EFFECTS + "iceBallSmall";
+        public static string EFFECT_FIRE_BALL_SMALL = EFFECTS + "fireBallSmall";
+        public static string EFFECT_FIRE_BALL_SMALL_LEFT = EFFECT_FIRE_BALL_SMALL + "Left";
 
        
 
@@ -134,6 +137,9 @@ namespace King_of_Thieves.Graphics
             //projectiles
             textures.Add(EFFECT_ENERGY_WAVE_SMALL, new CTextureAtlas("effects:various", 32, 32, 0, "2:0", "2:0", 0));
             textures.Add(EFFECT_ENERGY_WAVE_SMALL_LEFT, new CTextureAtlas("effects:various", 32, 32, 0, "3:0", "3:0", 0));
+            textures.Add(EFFECT_ICE_BALL_SMALL, new CTextureAtlas("effects:various", 32, 32, 0, "4:0", "5:0", 1));
+            textures.Add(EFFECT_FIRE_BALL_SMALL, new CTextureAtlas("effects:various", 32, 32, 0, "3:1", "5:1", 3));
+            textures.Add(EFFECT_FIRE_BALL_SMALL_LEFT, new CTextureAtlas("effects:various", 32, 32, 0, "0:1", "2:1", 3));
 
             //HUD
             textures.Add("HUD:text:textBox", new CTextureAtlas("hud", 303, 74, 0, "0:0", "0:0", 0));
