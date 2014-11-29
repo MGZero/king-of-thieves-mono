@@ -21,6 +21,7 @@ namespace King_of_Thieves.Graphics
         //namespaces
         public static string EFFECTS = "effects:";
         public static string PLAYER = "Player:";
+        public static string DROPS = "Drops:";
 
         //actual constants
         public static string EFFECT_ENERGY_BALL_SMALL = EFFECTS + "energyBallSmall";
@@ -29,6 +30,8 @@ namespace King_of_Thieves.Graphics
         public static string EFFECT_ICE_BALL_SMALL = EFFECTS + "iceBallSmall";
         public static string EFFECT_FIRE_BALL_SMALL = EFFECTS + "fireBallSmall";
         public static string EFFECT_FIRE_BALL_SMALL_LEFT = EFFECT_FIRE_BALL_SMALL + "Left";
+
+        public static string DROPS_HEART = DROPS + "heart";
 
        
 
@@ -138,8 +141,8 @@ namespace King_of_Thieves.Graphics
             textures.Add(EFFECT_ENERGY_WAVE_SMALL, new CTextureAtlas("effects:various", 32, 32, 0, "2:0", "2:0", 0));
             textures.Add(EFFECT_ENERGY_WAVE_SMALL_LEFT, new CTextureAtlas("effects:various", 32, 32, 0, "3:0", "3:0", 0));
             textures.Add(EFFECT_ICE_BALL_SMALL, new CTextureAtlas("effects:various", 32, 32, 0, "4:0", "5:0", 1));
-            textures.Add(EFFECT_FIRE_BALL_SMALL, new CTextureAtlas("effects:various", 32, 32, 0, "3:1", "5:1", 3));
-            textures.Add(EFFECT_FIRE_BALL_SMALL_LEFT, new CTextureAtlas("effects:various", 32, 32, 0, "0:1", "2:1", 3));
+            textures.Add(EFFECT_FIRE_BALL_SMALL, new CTextureAtlas("effects:various", 32, 32, 0, "3:1", "5:1", 5));
+            textures.Add(EFFECT_FIRE_BALL_SMALL_LEFT, new CTextureAtlas("effects:various", 32, 32, 0, "0:1", "2:1", 5));
 
             //HUD
             textures.Add("HUD:text:textBox", new CTextureAtlas("hud", 303, 74, 0, "0:0", "0:0", 0));
@@ -152,6 +155,9 @@ namespace King_of_Thieves.Graphics
             textures.Add("HUD:buttonLeft", new CTextureAtlas("hudButtons", 32, 32, 0, "0:0", "0:0", 0));
             textures.Add("HUD:buttonRight", new CTextureAtlas("hudButtons", 32, 32, 0, "1:0", "1:0", 0));
             textures.Add("HUD:buttonUp", new CTextureAtlas("hudButtons", 32, 32, 0, "2:0", "2:0", 0));
+
+            //drops
+            textures.Add("drops:heart", new CTextureAtlas("drops:drops01", 16, 16, 1, "0:0", "0:0"));
         }
 
         public static void addRawTexture(string textureName, string fileNameNoExt)
@@ -178,7 +184,8 @@ namespace King_of_Thieves.Graphics
             rawTextures.Add("potSmall", _content.Load<Texture2D>("potSmall"));
             rawTextures.Add("maple", _content.Load<Texture2D>("maple"));
 
-            
+            //drops
+            rawTextures.Add("drops:drops01", _content.Load<Texture2D>("drops/drops01"));
             
             //tilesets
             rawTextures.Add("tileset:indoors:house",_content.Load<Texture2D>(@"tilesets/indoors/house"));

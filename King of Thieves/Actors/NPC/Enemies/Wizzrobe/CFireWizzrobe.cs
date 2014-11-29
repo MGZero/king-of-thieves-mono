@@ -6,11 +6,12 @@ using Microsoft.Xna.Framework;
 
 namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
 {
-    class CIceWizzrobe : CBaseWizzrobe
+    class CFireWizzrobe : CBaseWizzrobe
     {
-        private static int _iceWizzrobeCount = 0;
+
+        private static int _fireWizzrobeCount = 0;
         //texture atlas constants
-        protected readonly static string _SPRITE_NAMESPACE = "Npc:IceWizzrobe";
+        protected readonly static string _SPRITE_NAMESPACE = "Npc:FireWizzrobe";
         protected readonly static string _WIZZROBE_IDLE_DOWN = _SPRITE_NAMESPACE + ":idleDown";
         protected readonly static string _WIZZROBE_ATTACK_DOWN = _SPRITE_NAMESPACE + ":attackDown";
         protected readonly static string _WIZZROBE_IDLE_LEFT = _SPRITE_NAMESPACE + ":idleLeft";
@@ -20,19 +21,19 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
         protected readonly static string _WIZZROBE_IDLE_UP = _SPRITE_NAMESPACE + ":idleUp";
         protected readonly static string _WIZZROBE_ATTACK_UP = _SPRITE_NAMESPACE + ":attackUp";
 
-        public CIceWizzrobe() :
-            base(WIZZROBE_TYPE.ICE)
+        public CFireWizzrobe() :
+            base(WIZZROBE_TYPE.FIRE)
         {
             //we have to cache the sprites
-            if (_iceWizzrobeCount <= 0)
+            if (_fireWizzrobeCount <= 0)
             {
-                Graphics.CTextures.addTexture(_WIZZROBE_IDLE_DOWN, new Graphics.CTextureAtlas(_NPC_WIZZROBE, 32, 32, 0, "0:3", "0:3"));
-                Graphics.CTextures.addTexture(_WIZZROBE_IDLE_LEFT, new Graphics.CTextureAtlas(_NPC_WIZZROBE, 32, 32, 0, "2:3", "2:3"));
-                Graphics.CTextures.addTexture(_WIZZROBE_IDLE_UP, new Graphics.CTextureAtlas(_NPC_WIZZROBE, 32, 32, 0, "4:3", "4:3"));
+                Graphics.CTextures.addTexture(_WIZZROBE_IDLE_DOWN, new Graphics.CTextureAtlas(_NPC_WIZZROBE, 32, 32, 0, "0:2", "0:2"));
+                Graphics.CTextures.addTexture(_WIZZROBE_IDLE_LEFT, new Graphics.CTextureAtlas(_NPC_WIZZROBE, 32, 32, 0, "2:2", "2:2"));
+                Graphics.CTextures.addTexture(_WIZZROBE_IDLE_UP, new Graphics.CTextureAtlas(_NPC_WIZZROBE, 32, 32, 0, "4:2", "4:2"));
 
-                Graphics.CTextures.addTexture(_WIZZROBE_ATTACK_DOWN, new Graphics.CTextureAtlas(_NPC_WIZZROBE, 32, 32, 0, "1:3", "1:3"));
-                Graphics.CTextures.addTexture(_WIZZROBE_ATTACK_LEFT, new Graphics.CTextureAtlas(_NPC_WIZZROBE, 32, 32, 0, "3:3", "3:3"));
-                Graphics.CTextures.addTexture(_WIZZROBE_ATTACK_UP, new Graphics.CTextureAtlas(_NPC_WIZZROBE, 32, 32, 0, "5:3", "5:3"));
+                Graphics.CTextures.addTexture(_WIZZROBE_ATTACK_DOWN, new Graphics.CTextureAtlas(_NPC_WIZZROBE, 32, 32, 0, "1:2", "1:2"));
+                Graphics.CTextures.addTexture(_WIZZROBE_ATTACK_LEFT, new Graphics.CTextureAtlas(_NPC_WIZZROBE, 32, 32, 0, "3:2", "3:2"));
+                Graphics.CTextures.addTexture(_WIZZROBE_ATTACK_UP, new Graphics.CTextureAtlas(_NPC_WIZZROBE, 32, 32, 0, "5:2", "5:2"));
             }
 
             _imageIndex.Add(_IDLE_DOWN, new Graphics.CSprite(_WIZZROBE_IDLE_DOWN));
@@ -45,15 +46,17 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
             _imageIndex.Add(_ATTACK_RIGHT, new Graphics.CSprite(_WIZZROBE_ATTACK_LEFT, true));
             _imageIndex.Add(_ATTACK_UP, new Graphics.CSprite(_WIZZROBE_ATTACK_UP));
 
-            _iceWizzrobeCount += 1;
+            _fireWizzrobeCount += 1;
+
+
         }
 
         protected override void cleanUp()
         {
-            if (_iceWizzrobeCount <= 0)
+            if (_fireWizzrobeCount <= 0)
             {
                 Graphics.CTextures.cleanUp(_SPRITE_NAMESPACE);
-                _iceWizzrobeCount = 0;
+                _fireWizzrobeCount = 0;
                 base.cleanUp();
             }
 
@@ -61,12 +64,12 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
 
         public override void destroy(object sender)
         {
-            _iceWizzrobeCount--;
+            _fireWizzrobeCount--;
 
-            if (_iceWizzrobeCount <= 0)
+            if (_fireWizzrobeCount <= 0)
             {
                 cleanUp();
-                _iceWizzrobeCount = 0;
+                _fireWizzrobeCount = 0;
             }
 
             base.destroy(sender);
@@ -79,22 +82,24 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
             switch (_direction)
             {
                 case DIRECTION.DOWN:
-                    projectileVelo.Y = 5;
+                    projectileVelo.Y = 3;
                     break;
 
                 case DIRECTION.UP:
-                    projectileVelo.Y = -5;
+                    projectileVelo.Y = -3;
                     break;
 
                 case DIRECTION.RIGHT:
-                    projectileVelo.X = 5;
+                    projectileVelo.X = 3;
                     break;
 
                 case DIRECTION.LEFT:
-                    projectileVelo.X = -5;
+                    projectileVelo.X = -3;
                     break;
             }
-            Map.CMapManager.addActorToComponent(new Actors.Projectiles.CIceBall(_direction, projectileVelo, _position), componentAddress);
+
+            Map.CMapManager.addActorToComponent(new Actors.Projectiles.CFireBall(_direction, projectileVelo, _position), componentAddress);
         }
+
     }
 }

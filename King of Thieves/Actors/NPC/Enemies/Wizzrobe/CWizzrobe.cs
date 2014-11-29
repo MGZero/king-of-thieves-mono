@@ -10,6 +10,16 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Wizzrobe
     {
         
         private static int _normalWizzrobeCount = 0;
+        //texture atlas constants
+        protected readonly static string _SPRITE_NAMESPACE = "Npc:wizzrobe";
+        protected readonly static string _WIZZROBE_IDLE_DOWN = _SPRITE_NAMESPACE + ":idleDown";
+        protected readonly static string _WIZZROBE_ATTACK_DOWN = _SPRITE_NAMESPACE + ":attackDown";
+        protected readonly static string _WIZZROBE_IDLE_LEFT = _SPRITE_NAMESPACE + ":idleLeft";
+        protected readonly static string _WIZZROBE_ATTACK_LEFT = _SPRITE_NAMESPACE + ":attackLeft";
+        protected readonly static string _WIZZROBE_IDLE_RIGHT = _SPRITE_NAMESPACE + ":idleRight";
+        protected readonly static string _WIZZROBE_ATTACK_RIGHT = _SPRITE_NAMESPACE + ":attackRight";
+        protected readonly static string _WIZZROBE_IDLE_UP = _SPRITE_NAMESPACE + ":idleUp";
+        protected readonly static string _WIZZROBE_ATTACK_UP = _SPRITE_NAMESPACE + ":attackUp";
 
         public CWizzrobe() :
             base(WIZZROBE_TYPE.NORMAL)

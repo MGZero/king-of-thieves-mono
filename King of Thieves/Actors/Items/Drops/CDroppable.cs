@@ -14,11 +14,5 @@ namespace King_of_Thieves.Actors.Items.Drops
         {
 
         }
-
-        protected override void applyEffects()
-        {
-        }
-
-
     }
 }

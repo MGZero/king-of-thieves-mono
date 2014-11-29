@@ -63,6 +63,7 @@
     <Compile Include="Actors\Items\decoration\CChest.cs" />
     <Compile Include="Actors\Items\decoration\CPot.cs" />
     <Compile Include="Actors\Items\Drops\CDroppable.cs" />
+    <Compile Include="Actors\Items\Drops\CHeartDrop.cs" />
     <Compile Include="Actors\Items\Drops\playerStats\CDropHeart.cs" />
     <Compile Include="Actors\Items\Swords\CGerudoSword.cs" />
     <Compile Include="Actors\Menu\CMenu.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Actors\NPC\Enemies\Keese\CKeeseShadow.cs" />
     <Compile Include="Actors\NPC\Enemies\Keese\CKeeseThunder.cs" />
     <Compile Include="Actors\NPC\Enemies\Wizzrobe\CBaseWizzrobe.cs" />
+    <Compile Include="Actors\NPC\Enemies\Wizzrobe\CFireWizzrobe.cs" />
     <Compile Include="Actors\NPC\Enemies\Wizzrobe\CIceWizzrobe.cs" />
     <Compile Include="Actors\NPC\Enemies\Wizzrobe\CWizzrobe.cs" />
     <Compile Include="Actors\NPC\Other\Maple\CMaple.cs" />
