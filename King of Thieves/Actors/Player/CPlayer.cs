@@ -22,6 +22,7 @@ namespace King_of_Thieves.Actors.Player
         private int _collisionDirectionX = 0;
         private int _collisionDirectionY = 0;
         private Keys _lastHudKeyPressed = Keys.None;
+        private string _lastArrowShotName = "";
 
         public CPlayer() :
             base()
@@ -93,9 +94,19 @@ namespace King_of_Thieves.Actors.Player
             _imageIndex.Add("PlayerFreezeRight", new Graphics.CSprite("Player:FreezeLeft", Graphics.CTextures.textures["Player:FreezeLeft"], null, true));
 
             _imageIndex.Add("PlayerChargeArrowDown", new Graphics.CSprite(Graphics.CTextures.PLAYER_CHARGE_ARROW_DOWN, Graphics.CTextures.textures[Graphics.CTextures.PLAYER_CHARGE_ARROW_DOWN]));
-            _imageIndex.Add("PlayeChargeArrowUp", new Graphics.CSprite(Graphics.CTextures.PLAYER_CHARGE_ARROW_UP, Graphics.CTextures.textures[Graphics.CTextures.PLAYER_CHARGE_ARROW_UP]));
+            _imageIndex.Add("PlayerChargeArrowUp", new Graphics.CSprite(Graphics.CTextures.PLAYER_CHARGE_ARROW_UP, Graphics.CTextures.textures[Graphics.CTextures.PLAYER_CHARGE_ARROW_UP]));
             _imageIndex.Add("PlayerChargeArrowLeft", new Graphics.CSprite(Graphics.CTextures.PLAYER_CHARGE_ARROW_LEFT, Graphics.CTextures.textures[Graphics.CTextures.PLAYER_CHARGE_ARROW_LEFT]));
             _imageIndex.Add("PlayerChargeArrowRight", new Graphics.CSprite(Graphics.CTextures.PLAYER_CHARGE_ARROW_LEFT, Graphics.CTextures.textures[Graphics.CTextures.PLAYER_CHARGE_ARROW_LEFT], null, true));
+
+            _imageIndex.Add("PlayerHoldArrowDown", new Graphics.CSprite(Graphics.CTextures.PLAYER_HOLD_ARROW_DOWN, Graphics.CTextures.textures[Graphics.CTextures.PLAYER_HOLD_ARROW_DOWN]));
+            _imageIndex.Add("PlayerHoldArrowUp", new Graphics.CSprite(Graphics.CTextures.PLAYER_HOLD_ARROW_UP, Graphics.CTextures.textures[Graphics.CTextures.PLAYER_HOLD_ARROW_UP]));
+            _imageIndex.Add("PlayerHoldArrowLeft", new Graphics.CSprite(Graphics.CTextures.PLAYER_HOLD_ARROW_LEFT, Graphics.CTextures.textures[Graphics.CTextures.PLAYER_HOLD_ARROW_LEFT]));
+            _imageIndex.Add("PlayerHoldArrowRight", new Graphics.CSprite(Graphics.CTextures.PLAYER_HOLD_ARROW_LEFT, Graphics.CTextures.textures[Graphics.CTextures.PLAYER_HOLD_ARROW_LEFT], null, true));
+
+            _imageIndex.Add("PlayerShootArrowDown", new Graphics.CSprite(Graphics.CTextures.PLAYER_SHOOT_ARROW_DOWN, Graphics.CTextures.textures[Graphics.CTextures.PLAYER_SHOOT_ARROW_DOWN]));
+            _imageIndex.Add("PlayerShootArrowUp", new Graphics.CSprite(Graphics.CTextures.PLAYER_SHOOT_ARROW_UP, Graphics.CTextures.textures[Graphics.CTextures.PLAYER_SHOOT_ARROW_UP]));
+            _imageIndex.Add("PlayerShootArrowLeft", new Graphics.CSprite(Graphics.CTextures.PLAYER_SHOOT_ARROW_LEFT, Graphics.CTextures.textures[Graphics.CTextures.PLAYER_SHOOT_ARROW_LEFT]));
+            _imageIndex.Add("PlayerShootArrowRight", new Graphics.CSprite(Graphics.CTextures.PLAYER_SHOOT_ARROW_LEFT, Graphics.CTextures.textures[Graphics.CTextures.PLAYER_SHOOT_ARROW_LEFT], null, true));
         }
 
         public override void collide(object sender, CActor collider)
@@ -229,6 +240,14 @@ namespace King_of_Thieves.Actors.Player
                 case ACTOR_STATES.THROWING:
                     _state = ACTOR_STATES.IDLE;
                     break;
+
+                case ACTOR_STATES.CHARGING_ARROW:
+                    _holdArrow();
+                    break;
+
+                case ACTOR_STATES.SHOOTING_ARROW:
+                    _state = ACTOR_STATES.IDLE;
+                    break;
             }
 
             
@@ -248,6 +267,9 @@ namespace King_of_Thieves.Actors.Player
                         Graphics.CGraphics.changeResolution(320, 240);
                         Master.Pop();
                     }
+
+                    if (input.keysPressed.Contains(Keys.Left) && _lastHudKeyPressed != Keys.Left)
+                        _useItem(0);
 
                     if (input.keysPressed.Contains(Keys.A))
                     {
@@ -334,10 +356,15 @@ namespace King_of_Thieves.Actors.Player
                     switch (state)
                     {
                         case ACTOR_STATES.CHARGING_ARROW:
-                            if (_lastHudKeyPressed == Keys.Left)
-                                state = ACTOR_STATES.SHOOTING_ARROW;
+                            _shootArrow();
+                            break;
+
+                        case ACTOR_STATES.HOLD_ARROW:
+                            _shootArrow();
                             break;
                     }
+
+                    _lastHudKeyPressed = Keys.None;
                 }
 
                 if (input.keysReleased.Contains(Keys.LeftShift) && _state == ACTOR_STATES.MOVING)
@@ -660,6 +687,25 @@ namespace King_of_Thieves.Actors.Player
         private void _beginArrowCharge()
         {
             _state = ACTOR_STATES.CHARGING_ARROW;
+
+            switch (_direction)
+            {
+                case DIRECTION.LEFT:
+                    swapImage("PlayerChargeArrowLeft");
+                    break;
+
+                case DIRECTION.RIGHT:
+                    swapImage("PlayerChargeArrowRight");
+                    break;
+
+                case DIRECTION.DOWN:
+                    swapImage("PlayerChargeArrowDown");
+                    break;
+
+                case DIRECTION.UP:
+                    swapImage("PlayerChargeArrowUp");
+                    break;
+            }
         }
 
         private void _holdArrow()
@@ -667,11 +713,53 @@ namespace King_of_Thieves.Actors.Player
             Vector2 arrowVelocity = Vector2.Zero;
             Projectiles.CArrow arrow = new Actors.Projectiles.CArrow(_direction,arrowVelocity,_position);
             Map.CMapManager.addActorToComponent(arrow, this.componentAddress);
+            _lastArrowShotName = arrow.name;
+
+            switch (_direction)
+            {
+                case DIRECTION.LEFT:
+                    swapImage("PlayerHoldArrowLeft");
+                    break;
+
+                case DIRECTION.RIGHT:
+                    swapImage("PlayerHoldArrowRight");
+                    break;
+
+                case DIRECTION.DOWN:
+                    swapImage("PlayerHoldArrowDown");
+                    break;
+
+                case DIRECTION.UP:
+                    swapImage("PlayerHoldArrowUp");
+                    break;
+            }
         }
 
         private void _shootArrow()
         {
-            _state = ACTOR_STATES.SHOOTING_ARROW;
+            if (_lastHudKeyPressed == Keys.Left)
+                state = ACTOR_STATES.SHOOTING_ARROW;
+
+            _triggerUserEvent(0, _lastArrowShotName);
+
+            switch (_direction)
+            {
+                case DIRECTION.LEFT:
+                    swapImage("PlayerShootArrowLeft");
+                    break;
+
+                case DIRECTION.RIGHT:
+                    swapImage("PlayerShootArrowRight");
+                    break;
+
+                case DIRECTION.DOWN:
+                    swapImage("PlayerShootArrowDown");
+                    break;
+
+                case DIRECTION.UP:
+                    swapImage("PlayerShootArrowUp");
+                    break;
+            }
         }
 
         //non negative == left

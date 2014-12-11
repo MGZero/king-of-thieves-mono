@@ -39,6 +39,7 @@ namespace King_of_Thieves.Actors
         DUSK,
         FLYING,
         FROZEN,
+        HOLD_ARROW,
         IDLE,
         INVISIBLE,
         KNOCKBACK,

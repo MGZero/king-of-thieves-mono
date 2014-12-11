@@ -30,6 +30,8 @@ namespace King_of_Thieves.Graphics
         public static string EFFECT_ICE_BALL_SMALL = EFFECTS + "iceBallSmall";
         public static string EFFECT_FIRE_BALL_SMALL = EFFECTS + "fireBallSmall";
         public static string EFFECT_FIRE_BALL_SMALL_LEFT = EFFECT_FIRE_BALL_SMALL + "Left";
+        public static string EFFECT_ARROW = EFFECTS + "arrow";
+        public static string EFFECT_ARROW_RIGHT = EFFECTS + "arrowRight";
 
         public static string DROPS_HEART = DROPS + "heart";
 
@@ -162,6 +164,8 @@ namespace King_of_Thieves.Graphics
             textures.Add(EFFECT_ICE_BALL_SMALL, new CTextureAtlas("effects:various", 32, 32, 0, "4:0", "5:0", 1));
             textures.Add(EFFECT_FIRE_BALL_SMALL, new CTextureAtlas("effects:various", 32, 32, 0, "3:1", "5:1", 5));
             textures.Add(EFFECT_FIRE_BALL_SMALL_LEFT, new CTextureAtlas("effects:various", 32, 32, 0, "0:1", "2:1", 5));
+            textures.Add(EFFECT_ARROW, new CTextureAtlas("effects:various", 32, 32, 0, "1:2", "1:2", 0));
+            textures.Add(EFFECT_ARROW_RIGHT, new CTextureAtlas("effects:various", 32, 32, 0, "0:2", "0:2", 0));
 
             //HUD
             textures.Add("HUD:text:textBox", new CTextureAtlas("hud", 303, 74, 0, "0:0", "0:0", 0));
