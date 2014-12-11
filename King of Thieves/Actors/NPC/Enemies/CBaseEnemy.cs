@@ -11,10 +11,16 @@ namespace King_of_Thieves.Actors.NPC.Enemies
 {
     //has all the things that an enemy NPC will have
     //ex: item drops
-    public struct dropRate
+    public class dropRate
     {
-        public Items.Drops.CDroppable item;
-        public float rate;
+        public dropRate(Items.Drops.CDroppable drop, float rate)
+        {
+            item = drop;
+            this.rate = rate;
+        }
+
+        public readonly Items.Drops.CDroppable item;
+        public readonly float rate;
     }
 
     public enum ENEMY_PROPERTIES
@@ -98,6 +104,7 @@ namespace King_of_Thieves.Actors.NPC.Enemies
         public override void destroy(object sender)
         {
             Items.Drops.CDroppable itemToDrop = _dropItem();
+            Map.CMapManager.addActorToComponent(itemToDrop, CReservedAddresses.DROP_CONTROLLER);
 
             if (_hitBox != null)
                 base.destroy(sender);
@@ -108,7 +115,7 @@ namespace King_of_Thieves.Actors.NPC.Enemies
             Random roller = new Random();
             
             //pick a random number and see which range it falls into
-            double selection = _randNum.NextDouble();
+            double selection = _randNum.NextDouble() * 100;
             float previous = 0;
 
             foreach (KeyValuePair<Items.Drops.CDroppable, float> x in _itemDrop)

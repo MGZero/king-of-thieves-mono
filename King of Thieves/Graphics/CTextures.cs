@@ -33,6 +33,16 @@ namespace King_of_Thieves.Graphics
 
         public static string DROPS_HEART = DROPS + "heart";
 
+        public static string PLAYER_CHARGE_ARROW_LEFT = PLAYER + "chargeArrowLeft";
+        public static string PLAYER_HOLD_ARROW_LEFT = PLAYER + "holdArrowLeft";
+        public static string PLAYER_SHOOT_ARROW_LEFT = PLAYER + "shootArrowLeft";
+        public static string PLAYER_CHARGE_ARROW_UP = PLAYER + "chargeArrowUp";
+        public static string PLAYER_HOLD_ARROW_UP = PLAYER + "holdArrowUp";
+        public static string PLAYER_SHOOT_ARROW_UP = PLAYER + "shootArrowUp";
+        public static string PLAYER_CHARGE_ARROW_DOWN = PLAYER + "chargeArrowDown";
+        public static string PLAYER_HOLD_ARROW_DOWN = PLAYER + "holdArrowDown";
+        public static string PLAYER_SHOOT_ARROW_DOWN = PLAYER + "shootArrowDown";
+
        
 
 
@@ -90,6 +100,15 @@ namespace King_of_Thieves.Graphics
             textures.Add("Player:FreezeDown", new CTextureAtlas("Player", 32, 32, 1, "11:4", "11:4", 0));
             textures.Add("Player:FreezeUp", new CTextureAtlas("Player", 32, 32, 1, "13:4", "13:4", 0));
             textures.Add("Player:FreezeLeft", new CTextureAtlas("Player", 32, 32, 1, "12:4", "12:4", 0));
+            textures.Add(PLAYER_CHARGE_ARROW_LEFT, new CTextureAtlas("Player", 32, 32, 1, "23:7", "25:7", 8));
+            textures.Add(PLAYER_CHARGE_ARROW_DOWN, new CTextureAtlas("Player", 32, 32, 1, "23:6", "25:6", 8));
+            textures.Add(PLAYER_CHARGE_ARROW_UP, new CTextureAtlas("Player", 32, 32, 1, "23:8", "25:8", 8));
+            textures.Add(PLAYER_HOLD_ARROW_LEFT, new CTextureAtlas("Player", 32, 32, 1, "25:7", "25:7", 0));
+            textures.Add(PLAYER_HOLD_ARROW_DOWN, new CTextureAtlas("Player", 32, 32, 1, "25:6", "25:6", 0));
+            textures.Add(PLAYER_HOLD_ARROW_UP, new CTextureAtlas("Player", 32, 32, 1, "25:8", "25:8", 0));
+            textures.Add(PLAYER_SHOOT_ARROW_LEFT, new CTextureAtlas("Player", 32, 32, 1, "26:7", "28:7", 8));
+            textures.Add(PLAYER_SHOOT_ARROW_DOWN, new CTextureAtlas("Player", 32, 32, 1, "26:6", "28:6", 8));
+            textures.Add(PLAYER_SHOOT_ARROW_UP, new CTextureAtlas("Player", 32, 32, 1, "26:8", "28:8", 8));
 
             textures.Add("GerudoSword:SwingDown", new CTextureAtlas("Swords", 64, 64, 1, "0:0", "7:0", 55));
             textures.Add("GerudoSword:SwingUp", new CTextureAtlas("Swords", 64, 64, 1, "0:1", "7:1", 55));
@@ -157,7 +176,7 @@ namespace King_of_Thieves.Graphics
             textures.Add("HUD:buttonUp", new CTextureAtlas("hudButtons", 32, 32, 0, "2:0", "2:0", 0));
 
             //drops
-            textures.Add("drops:heart", new CTextureAtlas("drops:drops01", 16, 16, 1, "0:0", "0:0"));
+            textures.Add(DROPS_HEART, new CTextureAtlas("drops:drops01", 16, 16, 1, "0:0", "0:0"));
         }
 
         public static void addRawTexture(string textureName, string fileNameNoExt)
@@ -185,7 +204,7 @@ namespace King_of_Thieves.Graphics
             rawTextures.Add("maple", _content.Load<Texture2D>("maple"));
 
             //drops
-            rawTextures.Add("drops:drops01", _content.Load<Texture2D>("drops/drops01"));
+            rawTextures.Add("drops:drops01", _content.Load<Texture2D>("sprites/drops/drops01"));
             
             //tilesets
             rawTextures.Add("tileset:indoors:house",_content.Load<Texture2D>(@"tilesets/indoors/house"));

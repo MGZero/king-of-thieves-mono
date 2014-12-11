@@ -12,6 +12,7 @@ namespace King_of_Thieves.Actors.Projectiles
         protected static readonly string PROJ_RIGHT = "projRight";
         protected static readonly string PROJ_UP = "projUp";
         protected static readonly string PROJ_DOWN = "projDown";
+        protected int _damage = 0;
 
         public CProjectile(DIRECTION direction, Vector2 velocity, Vector2 position) :
             base()
@@ -52,6 +53,12 @@ namespace King_of_Thieves.Actors.Projectiles
                     swapImage(PROJ_RIGHT);
                     break;
             }
+        }
+
+        public override void timer0(object sender)
+        {
+            base.timer0(sender);
+            _killMe = true;
         }
     }
 }

@@ -32,6 +32,18 @@ namespace King_of_Thieves.Map
             _layers = layers;
         }
 
+        private Actors.CComponent[] _createManagers()
+        {
+            Actors.CComponent[] managers = new Actors.CComponent[1];
+
+            //drop manager
+            Actors.CActor dropManagerRoot = new Actors.Controllers.GameControllers.CDropController();
+            managers[0] = new Actors.CComponent(Actors.CReservedAddresses.DROP_CONTROLLER);
+            managers[0].addActor(dropManagerRoot, "dropManagerRoot");
+
+            return managers;
+        }
+
         public CMap(string fileName)
         {
             _internalMap = Gears.Cartography.Map.deserialize(fileName);
@@ -41,6 +53,7 @@ namespace King_of_Thieves.Map
             /*if (_internalMap.TILESET != null)
                 _tileIndex = new Graphics.CSprite(_internalMap.TILESET, Graphics.CTextures.textures[_internalMap.TILESET]);*/
            
+
 
             foreach (Gears.Cartography.layer layer in _internalMap.LAYERS)
             {
@@ -114,6 +127,14 @@ namespace King_of_Thieves.Map
                 _layers[layerCount] = new CLayer(layer.NAME, compList, tiles, ref _tileIndex, Convert.ToDouble(_internalMap.VERSION));
                 _layers[layerCount++].otherImages = tileSets;
 
+            }
+
+            Actors.CComponent[] managers = _createManagers();
+            //add controllers
+            foreach (Actors.CComponent component in managers)
+            {
+                _layers[0].addComponent(component);
+                _componentRegistry.Add(component);
             }
 
         }

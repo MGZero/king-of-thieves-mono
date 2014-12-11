@@ -115,12 +115,7 @@ namespace King_of_Thieves.Sound
                 if (file.sfx != null)
                     file.sfx.Play();
                 else if (file.sfxInstance != null)
-                {
-                    if ((file.track != false) && (file.sfxInstance.State != SoundState.Playing))
-                        file.sfxInstance.Play();
-                    else //we don't care if it's playing or not, just dooooo it!
-                        file.sfxInstance.Play();
-                }
+                    file.sfxInstance.Play();
                 else if (file.song != null)
                 {
                     _song = file;

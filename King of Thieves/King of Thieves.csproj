@@ -48,6 +48,8 @@
     <Compile Include="Actors\Controllers\CEditorOpen.cs" />
     <Compile Include="Actors\Controllers\CEditorSave.cs" />
     <Compile Include="Actors\Controllers\GameControllers\CDayClock.cs" />
+    <Compile Include="Actors\Controllers\GameControllers\CDropController.cs" />
+    <Compile Include="Actors\CReservedAddresses.cs" />
     <Compile Include="Actors\Effects\CFire.cs" />
     <Compile Include="Actors\Effects\CIce.cs" />
     <Compile Include="Actors\Effects\CShadow.cs" />
@@ -84,6 +86,7 @@
     <Compile Include="Actors\NPC\Enemies\Wizzrobe\CWizzrobe.cs" />
     <Compile Include="Actors\NPC\Other\Maple\CMaple.cs" />
     <Compile Include="Actors\Player\CPlayer.cs" />
+    <Compile Include="Actors\Projectiles\CArrow.cs" />
     <Compile Include="Actors\Projectiles\CEnergyWave.cs" />
     <Compile Include="Actors\Projectiles\CFireBall.cs" />
     <Compile Include="Actors\Projectiles\CIceBall.cs" />

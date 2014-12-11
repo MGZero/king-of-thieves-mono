@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Xna.Framework;
 
 namespace King_of_Thieves.Actors.Items.Drops
 {
     class CHeartDrop : CDroppable
     {
         private static readonly string _HEART = "heart";
+        private static sbyte _heartCount = 0;
 
         public CHeartDrop() :
             base()
@@ -16,23 +18,19 @@ namespace King_of_Thieves.Actors.Items.Drops
 
             _imageIndex.Add(_HEART, new Graphics.CSprite(Graphics.CTextures.DROPS_HEART));
             swapImage(_HEART);
+            _name = "heart" + _heartCount++;
         }
 
         protected override void _addCollidables()
         {
-            base._addCollidables();
             _collidables.Add(typeof(Actors.Player.CPlayer));
         }
 
         public override void collide(object sender, CActor collider)
         {
             base.collide(sender, collider);
-
-            if (collider is Player.CPlayer)
-            {
-                _killMe = true;
-                CMasterControl.healthController.modifyHp(_capacity);
-            }
+            CMasterControl.healthController.modifyHp(_capacity);
+            _heartCount--;
         }
     }
 }

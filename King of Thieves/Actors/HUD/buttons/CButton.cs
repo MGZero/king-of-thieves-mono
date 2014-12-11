@@ -6,6 +6,11 @@ using Microsoft.Xna.Framework;
 
 namespace King_of_Thieves.Actors.HUD.buttons
 {
+    public enum HUDOPTIONS
+    {
+        ARROWS = 1
+    }
+
     class CButton : CHUDElement
     {
         public enum HUD_BUTTON_TYPE
@@ -15,6 +20,7 @@ namespace King_of_Thieves.Actors.HUD.buttons
         }
 
         private readonly HUD_BUTTON_TYPE _BUTTON_TYPE = 0;
+        public HUDOPTIONS hudItem = HUDOPTIONS.ARROWS;
 
         private static string _BUTTON_LEFT = "buttonLeft";
         private static string _BUTTON_RIGHT = "buttonRight";

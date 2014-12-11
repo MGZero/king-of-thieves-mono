@@ -14,5 +14,11 @@ namespace King_of_Thieves.Actors.Items.Drops
         {
 
         }
+
+        public override void collide(object sender, CActor collider)
+        {
+            base.collide(sender, collider);
+            _killMe = true;
+        }
     }
 }

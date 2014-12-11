@@ -32,6 +32,7 @@ namespace King_of_Thieves.Actors
     {
         ATTACK = 0,
         CARRY,
+        CHARGING_ARROW,
         CHASE,
         DAWN,
         DAY,
@@ -49,6 +50,7 @@ namespace King_of_Thieves.Actors
         POPDOWN,
         POPUP,
         ROLLING,
+        SHOOTING_ARROW,
         SMASH,
         SWINGING,
         SHOCKED,

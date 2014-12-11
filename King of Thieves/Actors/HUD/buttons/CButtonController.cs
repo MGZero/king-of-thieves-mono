@@ -23,5 +23,29 @@ namespace King_of_Thieves.Actors.HUD.buttons
             _buttonLeft.drawMe();
             _buttonRight.drawMe();
         }
+
+        public HUDOPTIONS buttonLeftItem
+        {
+            get
+            {
+                return _buttonLeft.hudItem;
+            }
+            set
+            {
+                _buttonLeft.hudItem = value;
+            }
+        }
+
+        public HUDOPTIONS buttonRightItem
+        {
+            get
+            {
+                return _buttonRight.hudItem;
+            }
+            set
+            {
+                _buttonRight.hudItem = value;
+            }
+        }
     }
 }

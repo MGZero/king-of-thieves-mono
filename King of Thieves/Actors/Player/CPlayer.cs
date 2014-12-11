@@ -21,6 +21,7 @@ namespace King_of_Thieves.Actors.Player
         private bool _acceptInput = true;
         private int _collisionDirectionX = 0;
         private int _collisionDirectionY = 0;
+        private Keys _lastHudKeyPressed = Keys.None;
 
         public CPlayer() :
             base()
@@ -90,6 +91,11 @@ namespace King_of_Thieves.Actors.Player
             _imageIndex.Add("PlayerFreezeUp", new Graphics.CSprite("Player:FreezeUp", Graphics.CTextures.textures["Player:FreezeUp"]));
             _imageIndex.Add("PlayerFreezeLeft", new Graphics.CSprite("Player:FreezeLeft", Graphics.CTextures.textures["Player:FreezeLeft"]));
             _imageIndex.Add("PlayerFreezeRight", new Graphics.CSprite("Player:FreezeLeft", Graphics.CTextures.textures["Player:FreezeLeft"], null, true));
+
+            _imageIndex.Add("PlayerChargeArrowDown", new Graphics.CSprite(Graphics.CTextures.PLAYER_CHARGE_ARROW_DOWN, Graphics.CTextures.textures[Graphics.CTextures.PLAYER_CHARGE_ARROW_DOWN]));
+            _imageIndex.Add("PlayeChargeArrowUp", new Graphics.CSprite(Graphics.CTextures.PLAYER_CHARGE_ARROW_UP, Graphics.CTextures.textures[Graphics.CTextures.PLAYER_CHARGE_ARROW_UP]));
+            _imageIndex.Add("PlayerChargeArrowLeft", new Graphics.CSprite(Graphics.CTextures.PLAYER_CHARGE_ARROW_LEFT, Graphics.CTextures.textures[Graphics.CTextures.PLAYER_CHARGE_ARROW_LEFT]));
+            _imageIndex.Add("PlayerChargeArrowRight", new Graphics.CSprite(Graphics.CTextures.PLAYER_CHARGE_ARROW_LEFT, Graphics.CTextures.textures[Graphics.CTextures.PLAYER_CHARGE_ARROW_LEFT], null, true));
         }
 
         public override void collide(object sender, CActor collider)
@@ -321,6 +327,17 @@ namespace King_of_Thieves.Actors.Player
                 {
                     if (_state == ACTOR_STATES.MOVING)
                         _state = ACTOR_STATES.IDLE;
+                }
+
+                if (input.keysReleased.Contains(Keys.Left))
+                {
+                    switch (state)
+                    {
+                        case ACTOR_STATES.CHARGING_ARROW:
+                            if (_lastHudKeyPressed == Keys.Left)
+                                state = ACTOR_STATES.SHOOTING_ARROW;
+                            break;
+                    }
                 }
 
                 if (input.keysReleased.Contains(Keys.LeftShift) && _state == ACTOR_STATES.MOVING)
@@ -638,6 +655,49 @@ namespace King_of_Thieves.Actors.Player
             //update the HUD
             CMasterControl.audioPlayer.addSfx(CMasterControl.audioPlayer.soundBank["Player:Hurt1"]);
             CMasterControl.healthController.modifyHp(-damage);
+        }
+
+        private void _beginArrowCharge()
+        {
+            _state = ACTOR_STATES.CHARGING_ARROW;
+        }
+
+        private void _holdArrow()
+        {
+            Vector2 arrowVelocity = Vector2.Zero;
+            Projectiles.CArrow arrow = new Actors.Projectiles.CArrow(_direction,arrowVelocity,_position);
+            Map.CMapManager.addActorToComponent(arrow, this.componentAddress);
+        }
+
+        private void _shootArrow()
+        {
+            _state = ACTOR_STATES.SHOOTING_ARROW;
+        }
+
+        //non negative == left
+        //negative == right
+        private void _useItem(sbyte leftOrRight)
+        {
+            HUD.buttons.HUDOPTIONS option = 0;
+            if (leftOrRight >= 0)
+            {
+                option = CMasterControl.buttonController.buttonLeftItem;
+                _lastHudKeyPressed = CMasterControl.glblInput.getKeyIfDown(Keys.Left);
+            }
+            else
+            {
+                option = CMasterControl.buttonController.buttonRightItem;
+                _lastHudKeyPressed = CMasterControl.glblInput.getKeyIfDown(Keys.Right);
+            }
+
+            switch (option)
+            {
+                case HUD.buttons.HUDOPTIONS.ARROWS:
+                    _beginArrowCharge();
+                    break;
+            }
+
+            
         }
     }
 }

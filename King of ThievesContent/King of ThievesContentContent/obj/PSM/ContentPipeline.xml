@@ -515,6 +515,15 @@
       <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\effects\various-effects.xnb</Output>
       <Time>2014-11-28T12:50:14.8167495-05:00</Time>
     </Item>
+    <Item>
+      <Source>sprites\drops\drops01.png</Source>
+      <Name>sprites\drops\drops01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\ZFGC3\KoT\mono\King of Thieves-mono\King of ThievesContent\King of ThievesContent\bin\PSM\Content\sprites\drops\drops01.xnb</Output>
+      <Time>2014-11-29T01:16:57.4163105-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

@@ -39,7 +39,6 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Keese
         public CBaseKeese(int foh, params dropRate[] drops)
             : base(drops)
         {
-            _itemDrop.Add(new Items.Drops.playerStats.CDropHeart(), 100);
             _hearingRadius = foh;
             image = _imageIndex["keeseIdle"];
             _state = ACTOR_STATES.IDLE;

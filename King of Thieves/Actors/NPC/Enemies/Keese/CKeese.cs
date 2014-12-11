@@ -8,7 +8,7 @@ namespace King_of_Thieves.Actors.NPC.Enemies.Keese
     class CKeese : CBaseKeese
     {
         public CKeese()
-            : base(60)
+            : base(60, new dropRate(new Items.Drops.CHeartDrop(), 100))
         {
             _type = KEESETYPE.NORMAL;
         }

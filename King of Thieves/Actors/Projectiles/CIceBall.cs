@@ -20,12 +20,6 @@ namespace King_of_Thieves.Actors.Projectiles
             startTimer0(60);
         }
 
-        public override void timer0(object sender)
-        {
-            base.timer0(sender);
-            _killMe = true;
-        }
-
         public override void drawMe(bool useOverlay = false)
         {
             base.drawMe(useOverlay);

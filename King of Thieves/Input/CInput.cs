@@ -51,8 +51,22 @@ namespace King_of_Thieves.Input
                 return false;
 
             return (_keyStatePrevious.IsKeyDown(key) && _keyStateCurrent.IsKeyUp(key));
+        }
 
-            //MouseState x; x.
+        public Keys getKeyIfDown(Keys key)
+        {
+            if (getInputDown(key))
+                return key;
+
+            return Keys.None;
+        }
+
+        public Keys getKeyIfReleased(Keys key)
+        {
+            if (getInputRelease(key))
+                return key;
+
+            return Keys.None;
         }
 
 
