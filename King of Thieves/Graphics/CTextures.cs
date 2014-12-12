@@ -22,6 +22,7 @@ namespace King_of_Thieves.Graphics
         public static string EFFECTS = "effects:";
         public static string PLAYER = "Player:";
         public static string DROPS = "Drops:";
+        public static string HUD = "HUD:";
 
         //actual constants
         public static string EFFECT_ENERGY_BALL_SMALL = EFFECTS + "energyBallSmall";
@@ -44,6 +45,8 @@ namespace King_of_Thieves.Graphics
         public static string PLAYER_CHARGE_ARROW_DOWN = PLAYER + "chargeArrowDown";
         public static string PLAYER_HOLD_ARROW_DOWN = PLAYER + "holdArrowDown";
         public static string PLAYER_SHOOT_ARROW_DOWN = PLAYER + "shootArrowDown";
+
+        public static string HUD_ARROWS = HUD + "arrows";
 
        
 
@@ -178,6 +181,7 @@ namespace King_of_Thieves.Graphics
             textures.Add("HUD:buttonLeft", new CTextureAtlas("hudButtons", 32, 32, 0, "0:0", "0:0", 0));
             textures.Add("HUD:buttonRight", new CTextureAtlas("hudButtons", 32, 32, 0, "1:0", "1:0", 0));
             textures.Add("HUD:buttonUp", new CTextureAtlas("hudButtons", 32, 32, 0, "2:0", "2:0", 0));
+            textures.Add(HUD_ARROWS, new CTextureAtlas("hudButtons", 32, 32, 0, "0:1", "0:1", 0));
 
             //drops
             textures.Add(DROPS_HEART, new CTextureAtlas("drops:drops01", 16, 16, 1, "0:0", "0:0"));

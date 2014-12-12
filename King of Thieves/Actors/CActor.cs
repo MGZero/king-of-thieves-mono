@@ -191,6 +191,7 @@ namespace King_of_Thieves.Actors
             { }
 
             _registerUserEvents();
+            _registerSystemEvents();
             _initializeResources();
         }
 
@@ -210,6 +211,11 @@ namespace King_of_Thieves.Actors
             {
                 return _dataType;
             }
+        }
+
+        private void _registerSystemEvents()
+        {
+            _userEvents.Add(1000, (object sender) => _killMe = true);
         }
 
         public void lookAt(Vector2 position)

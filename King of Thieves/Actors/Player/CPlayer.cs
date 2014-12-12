@@ -124,26 +124,35 @@ namespace King_of_Thieves.Actors.Player
                 //enemy actor to handle
                 if (!INVINCIBLE_STATES.Contains(_state))
                 {
-                    if (collider is NPC.Enemies.CBaseEnemy)
+                    if (collider is NPC.Enemies.CBaseEnemy ||
+                        collider is Projectiles.CEnergyWave||
+                        collider is Projectiles.CFireBall)
                     {
-                        //start a moveback timer
-                        //change state to knockBack
-                        startTimer0(10);
-                        _state = ACTOR_STATES.KNOCKBACK;
-                        _acceptInput = false;
-                        solidCollide(collider, true);
+                        _collideWithNpcResponse(collider);
                     }
-                    else if (collider is Projectiles.CEnergyWave)
-                    {
-                        //start a moveback timer
-                        //change state to knockBack
-                        startTimer0(10);
-                        _state = ACTOR_STATES.KNOCKBACK;
-                        _acceptInput = false;
-                        solidCollide(collider, true);
-                    }
+                    else if (collider is Projectiles.CIceBall)
+                        _collideWithNpcResponse(collider, false);
                 }
             }
+        }
+
+        private void _destroyHeldItems()
+        {
+            if (_lastArrowShotName != string.Empty)
+                CMasterControl.commNet[componentAddress].Add(new CActorPacket(1000, _lastArrowShotName, this));
+        }
+
+        private void _collideWithNpcResponse(CActor collider, bool knockBack = true)
+        {
+            //start a moveback timer
+            //change state to knockBack
+            startTimer0(10);
+            if (knockBack)
+                _state = ACTOR_STATES.KNOCKBACK;
+
+            _acceptInput = false;
+            solidCollide(collider, true);
+            _destroyHeldItems();
         }
 
         private void solidCollide(CActor collider, bool knockBack = false)
@@ -714,6 +723,7 @@ namespace King_of_Thieves.Actors.Player
             Projectiles.CArrow arrow = new Actors.Projectiles.CArrow(_direction,arrowVelocity,_position);
             Map.CMapManager.addActorToComponent(arrow, this.componentAddress);
             _lastArrowShotName = arrow.name;
+            state = ACTOR_STATES.HOLD_ARROW;
 
             switch (_direction)
             {
@@ -741,6 +751,8 @@ namespace King_of_Thieves.Actors.Player
                 state = ACTOR_STATES.SHOOTING_ARROW;
 
             _triggerUserEvent(0, _lastArrowShotName);
+
+            _lastArrowShotName = string.Empty;
 
             switch (_direction)
             {

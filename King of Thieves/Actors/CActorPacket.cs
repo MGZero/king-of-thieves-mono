@@ -5,6 +5,11 @@ using System.Text;
 
 namespace King_of_Thieves.Actors
 {
+    enum RESERVED_COMMANDS
+    {
+        KILL = 1000
+    }
+
     class CActorPacket
     {
         private int _userEventID;

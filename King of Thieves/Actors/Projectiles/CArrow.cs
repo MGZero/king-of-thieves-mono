@@ -20,40 +20,21 @@ namespace King_of_Thieves.Actors.Projectiles
 
             _arrowCount += 1;
             _name = "arrow" + _arrowCount;
-            _hitBox = new Collision.CHitBox(this, 0, 0, 5, 5);
+            
             _damage = 1;
 
             startTimer1(60);
+        }
 
-            switch (_direction)
-            {
-                case DIRECTION.DOWN:
-                    swapImage(PROJ_DOWN);
-                    break;
-
-                case DIRECTION.RIGHT:
-                    swapImage(PROJ_RIGHT);
-                    break;
-
-                case DIRECTION.LEFT:
-                    swapImage(PROJ_LEFT);
-                    break;
-
-                case DIRECTION.UP:
-                    swapImage(PROJ_UP);
-                    break;
-            }
-
+        protected override void _addCollidables()
+        {
+            
         }
 
         public override void collide(object sender, CActor collider)
         {
             base.collide(sender, collider);
             _killMe = true;
-
-            if (collider is Player.CPlayer)
-                if (!INVINCIBLE_STATES.Contains(collider.state))
-                    collider.dealDamange(_damage, collider);
         }
 
         public override void destroy(object sender)
@@ -75,18 +56,26 @@ namespace King_of_Thieves.Actors.Projectiles
             switch (_direction)
             {
                 case DIRECTION.DOWN:
+                    swapImage(PROJ_DOWN);
+                    _hitBox = new Collision.CHitBox(this, 15, 20, 5, 5);
                     _velocity.Y = 4;
                     break;
 
                 case DIRECTION.RIGHT:
+                    swapImage(PROJ_RIGHT);
+                    _hitBox = new Collision.CHitBox(this, 24, 12, 5, 5);
                     _velocity.X = 4;
                     break;
 
                 case DIRECTION.LEFT:
+                    swapImage(PROJ_LEFT);
+                    _hitBox = new Collision.CHitBox(this, 6, 12, 5, 5);
                     _velocity.X = -4;
                     break;
 
                 case DIRECTION.UP:
+                    swapImage(PROJ_UP);
+                    _hitBox = new Collision.CHitBox(this, 15, 10, 5, 5);
                     _velocity.Y = -4;
                     break;
             }

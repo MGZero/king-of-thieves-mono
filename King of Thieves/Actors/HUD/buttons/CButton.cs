@@ -24,6 +24,7 @@ namespace King_of_Thieves.Actors.HUD.buttons
 
         private static string _BUTTON_LEFT = "buttonLeft";
         private static string _BUTTON_RIGHT = "buttonRight";
+        private Graphics.CSprite _itemOverlay = null;
         public CButton(HUD_BUTTON_TYPE type)
         {
             _BUTTON_TYPE = type;
@@ -34,6 +35,7 @@ namespace King_of_Thieves.Actors.HUD.buttons
                     _imageIndex.Add(_BUTTON_LEFT, new Graphics.CSprite("HUD:buttonLeft"));
                     swapImage(_BUTTON_LEFT);
                     _fixedPosition = new Vector2(250, 10);
+                    _itemOverlay = new Graphics.CSprite(Graphics.CTextures.HUD_ARROWS);
                     break;
 
                 case HUD_BUTTON_TYPE.RIGHT:
@@ -47,6 +49,9 @@ namespace King_of_Thieves.Actors.HUD.buttons
         public override void drawMe(bool useOverlay = false)
         {
             base.drawMe(useOverlay);
+
+            if (_itemOverlay != null)
+                _itemOverlay.draw((int)_position.X, (int)_position.Y);
         }
 
         public override void update(GameTime gameTime)
