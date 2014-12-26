@@ -23,6 +23,8 @@ namespace King_of_Thieves.Actors.Player
         private int _collisionDirectionY = 0;
         private Keys _lastHudKeyPressed = Keys.None;
         private string _lastArrowShotName = "";
+        private const int _MAX_BOMB_VELO = 5;
+        private int _bombVelo = 0;
 
         public CPlayer() :
             base()
@@ -365,6 +367,7 @@ namespace King_of_Thieves.Actors.Player
                     switch (state)
                     {
                         case ACTOR_STATES.CHARGING_ARROW:
+                            _queueUpArrow();
                             _shootArrow();
                             break;
 
@@ -578,11 +581,6 @@ namespace King_of_Thieves.Actors.Player
             _readableCoords = _position;
         }
 
-        //public override void drawMe(bool useOverlay = false)
-        //{
-        //    base.drawMe();
-        //}
-
         public override void timer0(object sender)
         {
             if (INVINCIBLE_STATES.Contains(_state))
@@ -717,12 +715,17 @@ namespace King_of_Thieves.Actors.Player
             }
         }
 
-        private void _holdArrow()
+        private void _queueUpArrow()
         {
             Vector2 arrowVelocity = Vector2.Zero;
             Projectiles.CArrow arrow = new Actors.Projectiles.CArrow(_direction,arrowVelocity,_position);
             Map.CMapManager.addActorToComponent(arrow, this.componentAddress);
             _lastArrowShotName = arrow.name;
+        }
+
+        private void _holdArrow()
+        {
+            _queueUpArrow();
             state = ACTOR_STATES.HOLD_ARROW;
 
             switch (_direction)
@@ -772,6 +775,16 @@ namespace King_of_Thieves.Actors.Player
                     swapImage("PlayerShootArrowUp");
                     break;
             }
+        }
+
+        private void _holdBomb()
+        {
+            
+        }
+
+        private void _shootBomb()
+        {
+
         }
 
         //non negative == left

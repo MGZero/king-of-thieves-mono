@@ -33,6 +33,9 @@ namespace King_of_Thieves.Graphics
         public static string EFFECT_FIRE_BALL_SMALL_LEFT = EFFECT_FIRE_BALL_SMALL + "Left";
         public static string EFFECT_ARROW = EFFECTS + "arrow";
         public static string EFFECT_ARROW_RIGHT = EFFECTS + "arrowRight";
+        public static string EFFECT_BOMB = EFFECTS + "bomb";
+        public static string EFFECT_BOMB_FAST_TICK = EFFECTS + "bombFastTick";
+        public static string EFFECT_EXPLOSION = EFFECTS + "explosion";
 
         public static string DROPS_HEART = DROPS + "heart";
 
@@ -47,6 +50,7 @@ namespace King_of_Thieves.Graphics
         public static string PLAYER_SHOOT_ARROW_DOWN = PLAYER + "shootArrowDown";
 
         public static string HUD_ARROWS = HUD + "arrows";
+        public static string HUD_BOMB_CANNON = HUD + "bombCannon";
 
        
 
@@ -169,6 +173,8 @@ namespace King_of_Thieves.Graphics
             textures.Add(EFFECT_FIRE_BALL_SMALL_LEFT, new CTextureAtlas("effects:various", 32, 32, 0, "0:1", "2:1", 5));
             textures.Add(EFFECT_ARROW, new CTextureAtlas("effects:various", 32, 32, 0, "1:2", "1:2", 0));
             textures.Add(EFFECT_ARROW_RIGHT, new CTextureAtlas("effects:various", 32, 32, 0, "0:2", "0:2", 0));
+            textures.Add(EFFECT_BOMB, new CTextureAtlas("effects:various", 32, 32, 0, "3:0", "3:0", 3));
+            textures.Add(EFFECT_BOMB_FAST_TICK, new CTextureAtlas("effects:various", 32, 32, 0, "3:0", "3:0", 10));
 
             //HUD
             textures.Add("HUD:text:textBox", new CTextureAtlas("hud", 303, 74, 0, "0:0", "0:0", 0));
@@ -182,6 +188,7 @@ namespace King_of_Thieves.Graphics
             textures.Add("HUD:buttonRight", new CTextureAtlas("hudButtons", 32, 32, 0, "1:0", "1:0", 0));
             textures.Add("HUD:buttonUp", new CTextureAtlas("hudButtons", 32, 32, 0, "2:0", "2:0", 0));
             textures.Add(HUD_ARROWS, new CTextureAtlas("hudButtons", 32, 32, 0, "0:1", "0:1", 0));
+            textures.Add(HUD_BOMB_CANNON, new CTextureAtlas("hudButtons", 32, 32, 0, "1:1", "1:1", 0));
 
             //drops
             textures.Add(DROPS_HEART, new CTextureAtlas("drops:drops01", 16, 16, 1, "0:0", "0:0"));

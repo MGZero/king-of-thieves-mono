@@ -37,6 +37,7 @@ namespace King_of_Thieves.Actors
         DAWN,
         DAY,
         DUSK,
+        EXPLODE,
         FLYING,
         FROZEN,
         HOLD_ARROW,
@@ -137,6 +138,7 @@ namespace King_of_Thieves.Actors
         {
             _hitBox.destroy();
             _hitBox = null;
+            _closeResources();
         }
 
         protected virtual void applyEffects(){}
@@ -276,6 +278,36 @@ namespace King_of_Thieves.Actors
         public void startTimer5(int ticks)
         {
             _timer5 = ticks;
+        }
+
+        public void stopTimer0()
+        {
+            _timer0 = 0;
+        }
+
+        public void stopTimer1()
+        {
+            _timer1 = 0;
+        }
+
+        public void stopTimer2()
+        {
+            _timer2 = 0;
+        }
+
+        public void stopTimer3()
+        {
+            _timer3 = 0;
+        }
+
+        public void stopTimer4()
+        {
+            _timer4 = 0;
+        }
+
+        public void stopTimer5()
+        {
+            _timer5 = 0;
         }
 
         //overload this and call the base to process your own parameters

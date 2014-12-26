@@ -30,10 +30,6 @@ namespace King_of_Thieves.Actors.HUD.buttons
             {
                 return _buttonLeft.hudItem;
             }
-            set
-            {
-                _buttonLeft.hudItem = value;
-            }
         }
 
         public HUDOPTIONS buttonRightItem
