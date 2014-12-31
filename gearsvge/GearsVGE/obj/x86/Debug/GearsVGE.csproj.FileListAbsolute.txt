@@ -17,3 +17,4 @@ G:\ZFGC3\KoT\mono\King of Thieves-mono\gearsvge\GearsVGE\bin\WindowsGL\Debug\Ope
 G:\ZFGC3\KoT\mono\King of Thieves-mono\gearsvge\GearsVGE\bin\WindowsGL\Debug\Tao.Sdl.dll
 G:\ZFGC3\KoT\mono\King of Thieves-mono\gearsvge\GearsVGE\obj\x86\Debug\GearsVGE.exe
 G:\ZFGC3\KoT\mono\King of Thieves-mono\gearsvge\GearsVGE\obj\x86\Debug\GearsVGE.pdb
+G:\ZFGC3\KoT\mono\King of Thieves-mono\gearsvge\GearsVGE\obj\x86\Debug\GearsVGE.csprojResolveAssemblyReference.cache

@@ -27,6 +27,11 @@ Content\tilesets\indoors\house.xnb
 Content\tilesets\items\chests-small.xnb
 Content\title\title-background.xnb
 Content\title\title-logo.xnb
+Content\hud\buttons.xnb
+Content\effects\bomb-explosion.xnb
+Content\sprites\npc\wizzrobe.xnb
+Content\effects\various-effects.xnb
+Content\sprites\drops\drops01.xnb
 Content\cursor.xnb
 Content\lttp_heart.xnb
 Content\sounds\health\Low_Health_Beep.xnb
@@ -47,7 +52,8 @@ Content\sounds\link\hurt2.xnb
 Content\sounds\link\hurt3.xnb
 Content\sounds\link\hurt4.xnb
 Content\sounds\link\hurt5.xnb
+Content\sounds\environment\shock.xnb
+Content\sounds\npc\wizzrobevanish.xnb
 Content\Fonts\benchmarker.xnb
 Content\Fonts\MenuFont.xnb
 Content\Fonts\sherwood.xnb
-Content\hud\buttons.xnb
